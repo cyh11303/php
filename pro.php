@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>가라GO</title>
-    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" type="text/css" href="ex2.css">
 </head>
+
 <body>
   <header>
 	<div class="search-container">
-		<img src="가라Go.JPG" alt="로고" class="logo">
         <form method="POST" action="http://localhost/php/pro.php/" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
             <button type="submit">검색</button>
         </form>
     </div>
+    <nav id="nav1">
+    <ul>
+      <li><a href="#">여행지</a></li>
+      <li><a href="#">축제</a></li>
+      <li><a href="#">맛집</a></li>
+      <li><a href="#">재난정보</a></li>
+      <li><a href="#">menu5</a></li>
+    </ul>
+  </nav>
     <nav class="navbar">
 		<ul>
 			<li><a href="#">여행지</a></li>
