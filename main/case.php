@@ -76,7 +76,9 @@ switch($a){
         $a=39;
         break;
     default:
-        echo"특별시 , 광역시 또는 행적구역으로 입력해주세요";
+        echo "<script>alert('지역명을 입력하여주세요!');</script>";
+
+
 }
 echo "<br>";
 ?>
