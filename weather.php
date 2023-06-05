@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>가라GO</title>
-    <link rel="stylesheet" href="pro.css">
-</head>
-<body>
-  <header>
-	<div class="search-container">
-		<img src="nepal.jpg" style="width: auto;height: 200px">
-        <form method="POST" action="weather1.php" >
-            <input type="text" placeholder="검색어를 입력하세요" name="weather">
-            <button type="submit">검색</button>
-        </form>
-</header>
-        <nav class="navbar">
-		<ul>
-            <li><a href="trip.php?trip=<?php echo $_GET["search"];?>">날씨</a></li>    
-			<li><a href="food.php?trip=<?php echo $_GET["trip"];?>">안전재난문자</a></li>
-			<li><a href="festival.php?trip=<?php echo $_GET["trip"];;?>">축제</a></li>
-		</ul>
-	</nav>
+<?php
+include('main/weathertab.php');
+?>
 <?php
 
 $host = 'localhost';
@@ -41,11 +18,13 @@ if(mysqli_connect_errno()){
     // echo $_POST["weather"] ;
     // echo "<br>";
   }
+
+
 include('main/case_weather.php');
 //echo $_POST["weather"] ;
 //echo "<br>";
 
-$sql = "select * from area where si='".$_POST["weather"]."'";"";
+$sql = "select * from area where si='".$_GET["weather"]."'";"";
 $result = mysqli_query($connect, $sql);
 while($row = mysqli_fetch_array($result)){
     //echo $row['nx']." ".$row['ny']." ".$row['lng']." ".$row['lat'];
@@ -80,55 +59,89 @@ curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
 $arr = json_decode($response,true);
+$k=0;
+$time1=date("H");
+$time1.="00"; //현재시간이 오후 10시20분일때 time1의 값은 2200이 되도록 설정
 
-
-for($i=12; $i<18; $i++){
+for($i=12; $i<18; $i++){ //총 6번 반복하며 각 값을 출력
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
-    //1시간 강수량 RN1
-    echo $arr2["baseDate"];
-    echo "일 ";
+
+    if($time1+($i%6)*100>=2400){ //현재시간에 1시간씩 더했을 때 24시간이상이면 날짜+1
+        $date=$arr2["baseDate"]+1;
+        echo $date;
+        echo "일 ";
+    }else{
+        $date=$arr2["baseDate"];
+        echo $date;
+        echo "일 ";
+    }
     echo $arr2["fcstTime"];
-    echo "시 ".$_POST["weather"]."의 1시간 강수량은 ";
+    echo "시 ".$_GET["weather"]."의 1시간 강수량은 ";
     echo $arr2["fcstValue"];
     echo "입니다.";
     echo "<br>";
+    //var_dump($date);
+    
 }
+
 echo "<hr>";
 for($i=18; $i<24; $i++){
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
-    echo $arr2["baseDate"];
-    echo "일 ";
+
+    if($time1+($i%6)*100>=2400){ //현재시간에 1시간씩 더했을 때 24시간이상이면 날짜+1
+        $date=$arr2["baseDate"]+1;
+        echo $date;
+        echo "일 ";
+    }else{
+        $date=$arr2["baseDate"];
+        echo $date;
+        echo "일 ";
+    }
     echo $arr2["fcstTime"];
-    echo "시 ".$_POST["weather"]."의 날씨는 ";
+    echo "시 ".$_GET["weather"]."의 날씨: ";
     switch($arr2["fcstValue"]){
         case $arr2["fcstValue"]==1:
             $arr2["fcstValue"]="맑음";
+            echo "<img src='photo/sun1.png'>";
+            echo "<br>";
             break;
         case $arr2["fcstValue"]==2:
             $arr2["fcstValue"]="구름조금";
+            echo "<img src='photo/weather.png'>";
+            echo "<br>";
             break;
         case $arr2["fcstValue"]==3:
             $arr2["fcstValue"]="구름많음";
+            echo "<img src='photo/sky.png'>";
+            echo "<br>";
             break;
         case $arr2["fcstValue"]==4:
             $arr2["fcstValue"]="흐림";
+            echo "<img src='photo/cloudy1.png'>";
+            echo "<br>";
             break;
     }
-    echo $arr2["fcstValue"];
-    echo "입니다.";
-    echo "<br>";
+    // echo $arr2["fcstValue"];
+    // echo "입니다.";
+    // echo "<br>";
 }
 echo "<hr>";
 for($i=24; $i<30; $i++){
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
-    //if($i>=12 || $i<18){
-        //1시간 온도 T1H
-    echo $arr2["baseDate"];
-    echo "일 ";
+    //1시간 온도 T1H
+    if($time1+($i%6)*100>=2400){ //현재시간에 1시간씩 더했을 때 24시간이상이면 날짜+1
+        $date=$arr2["baseDate"]+1;
+        echo $date;
+        echo "일 ";
+    }else{
+        $date=$arr2["baseDate"];
+        echo $date;
+        echo "일 ";
+    }
     echo $arr2["fcstTime"];
-    echo "시 ".$_POST["weather"]."의 온도는 ";
+    echo "시 ".$_GET["weather"]."의 온도는 ";
     echo $arr2["fcstValue"];
-    echo "도 입니다.";
+    echo "도입니다.";
     echo "<br>";
 }
 echo "<hr>";
@@ -180,7 +193,7 @@ echo "<hr>";
 // echo "<br>";
 
 mysqli_close($connect)
-  
+
 ?>
 
 

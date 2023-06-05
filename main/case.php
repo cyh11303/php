@@ -7,7 +7,7 @@ switch($a){
         break;
     case "인천":
     case "인천시":
-    case "인천특별시":
+    case "인천광역시":
         $a=2;
         break;
     case "대전":
@@ -36,13 +36,16 @@ switch($a){
         $a=7;
         break;
     case "세종":
+    case "세종시":
     case "세종특별시":  
         $a=8;
         break;
     case "경기도":
+    case "경기":
         $a=31;
         break;
     case "강원도":
+    case "강원":
         $a=32;
         break;    
     case "충북":
@@ -70,6 +73,8 @@ switch($a){
         $a=38;
         break;
     case "제주":
+    case "제주특별자치도":
+    case "제주시":
         $a=39;
         break;
     default:

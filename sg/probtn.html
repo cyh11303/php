@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="probtn.css">
 
    
   </head>
@@ -14,7 +14,7 @@
       <div class="intro_bg">
         <div class="header">
           <div class="searchArea">
-            <form method="POST" action="pro.php" >
+            <form method="POST" action="http://localhost/php/pro.php/" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
             <button type="submit">검색</button>
         </form>
@@ -38,33 +38,33 @@
         <li>
           <div>
             <div class="button">
-            <button onclick="location.href='nofood.php'">맛집</button >
+            <button onclick="location.href='next.html'">맛집</button >
             </div>
-            <div class="result"></div>
+            <div class="result">가성비 좋은 맛집 추천 </div>
           </div>
         </li>
         <li>
           <div>
             <div class="button">
-              <button onclick="location.href='notrip.php'">여행지</button >
+              <button onclick="location.href='http://localhost/php/trip.php/'">여행지</button >
               </div>
-            <div class="result"></div>
+            <div class="result">바닷가, 등산하기 좋은 곳 추천 </div>
           </div>
         </li>
         <li>
           <div>
             <div class="button">
-              <button onclick="location.href='noculture.php'">문화재</button >
+              <button onclick="location.href='next.html'">문화재</button >
               </div>
-            <div class="result"></div>
+            <div class="result">각각의 명소들 문화재 추천</div>
           </div>
         </li>
         <li>
             <div>
               <div class="button">
-                <button onclick="location.href='nofestival.php'">축제</button >
+                <button onclick="location.href='next.html'">축제</button >
                 </div>
-              <div class="result"></div>
+              <div class="result">이벤트 행사 기간 </div>
             </div>
         </li>
       </ul>
@@ -77,40 +77,40 @@
         <ul class="icons">
           <li>
             <div class="icon_img">
-              <img src="photo/weather.png">
+              <img src="weather.png">
             </div>
             <div class="contents1_bold">오늘의 날씨 </div>
             <div class="contents2">
                 날씨도 체크하고 여행 떠나자 !
             </div>
             <div class="more">
-              <more onclick="location.href='weatherex.php'">more</more >
+              <more onclick="location.href='next.html'">more</more >
             </div>
           </li>
 
           <li>
             <div class="icon_img">
-              <img src="photo/disaster.png">
+              <img src="disaster.png">
             </div>
             <div class="contents1_bold">안전 안내 문자</div>
             <div class="contents2">
                 혹시 모를 안전사고를 대비 ! 
             </div>
             <div class="more">
-              <more onclick="location.href='messageex.php'">more</more >
+              <more onclick="location.href='next.html'">more</more >
             </div>
           </li>
 
           <li>
             <div class="icon_img">
-              <img src="photo/foodicon1.png">
+              <img src="festival.png">
             </div>
-            <div class="contents1_bold">인기 맛집 TOP5</div>
+            <div class="contents1_bold">오늘의 축제</div>
             <div class="contents2">
-              각 지역의 인기 맛집 5곳 추천!
+              알아서 손해볼 것 없는 축제일정 ! 
             </div>
             <div class="more">
-              <more onclick="location.href='foodex.php'">more</more >
+              <more onclick="location.href='next.html'">more</more >
             </div>
           </li>
         </ul>

@@ -1,10 +1,11 @@
 <?php
-include('main/festivaltop.php');
+include('main/festivaltop2.php');
 ?>
 <?php
 
-$a = $_GET["trip"];
+$a = $_GET["search"];
 $Area=urlencode($a);
+echo "<br>";
 
 include('main/case.php');
 

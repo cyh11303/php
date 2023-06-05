@@ -1,130 +1,241 @@
 body {
-    margin: 0px;
-    background-image: url("boat.jpg")
-    } 
-  
-    .logo {
-      width: 150px; 
-      height: 90px; 
-      margin-right: 5px;
-    }
+  margin: 0px;
+  padding: 0px;
+  /* background-image: url("boat.jpg") */
+  } 
 
-    .backgd{
-      width: 300px;
-      height: 100px;
-      border: 1px solid red;
-      background-image: url('nepal.jpg');
-      padding: 10px;
-  
-      margin: 10px;
-    }  
+  .logo {
+    width: 150px; 
+    height: 90px; 
+    margin-right: 5px;
+  }
 
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #7700ff;
-      color: #ffffff;
-    }
-  
-    .navbar ul {
-      display: flex;
-      list-style: none;
-    }
-  
-    .navbar ul li {
-      margin: 0 50px; 
-    }
-  
-    .navbar ul li a {
-      color: #ffffff;
-      text-decoration: none;
-      padding: 15px;
-      font-size: 18px; 
-      font-family: 'Arial', sans-serif; 
-    }
-  
-    .navbar ul li a:hover {
-      background-color: #fefefe;
-      color: #000000;
-    }
+  .backgd{
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    background-image: url('photo/nepal.jpg');
+    padding: 10px;
 
-    .backgd{
-      width: 300px;
-      height: 100px;
-      border: 1px solid red;
-      background-image: url('nepal.jpg');
-      padding: 10px;
+    margin: 10px;
+  }  
+
+  .container{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: inline-block;
+    background: #f2f2f2;
+  }
   
-      margin: 10px;
-    }
+nav{
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  position: relative;
+  background: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+nav label{
+  width: 4.5%;
+  height: 100%;
+  padding: 18px 30px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  right: 20px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+nav label:hover{
+background: rgba(255, 0,0, 0.5);
+}
+nav label i{
+  margin-right: 4px;
+}
+nav .slider{
+  position: absolute;
+  height: 100%;
+  width: 5.4%;
+  background: #f00;
+  left: 84px;
+  top: 0;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+#Seoul:checked ~ nav label.Seoul,
+#Busan:checked ~ nav label.Busan,
+#Daegu:checked ~ nav label.Daegu,
+#Incheon:checked ~ nav label.Incheon,
+#Gwangju:checked ~ nav label.Gwangju,
+#Daejeon:checked ~ nav label.Daejeon,
+#Ulsan:checked ~ nav label.Ulsan,
+#Sejong:checked ~ nav label.Sejong,
+#Gyeonggi:checked ~ nav label.Gyeonggi,
+#Gangwon:checked ~ nav label.Gangwon,
+#Chungbuk:checked ~ nav label.Chungbuk,
+#Chungnam:checked ~ nav label.Chungnam,
+#Jeonbuk:checked ~ nav label.Jeonbuk,
+#Jeonnam:checked ~ nav label.Jeonnam,
+#Gyeongbuk:checked ~ nav label.Gyeongbuk,
+#Gyeongnam:checked ~ nav label.Gyeongnam,
+#Jeju:checked ~ nav label.Jeju{
+  color: #fff;
+}
+#Seoul:hover ~ nav .slider {
+  left: 5%;
+}
+#Busan:hover ~ nav .slider {
+  left: 9.85%;
+}
+#Daegu:hover ~ nav .slider {
+  left: 15.2%;
+}
+#Incheon:hover ~ nav .slider {
+  left: 20.55%;
+}
+#Gwangju:hover ~ nav .slider {
+  left: 25.95%;
+}
+#Daejeon:hover ~ nav .slider {
+  left: 31.35%;
+}
+#Ulsan:hover ~ nav .slider {
+  left: 36.7%;
+}
+#Sejong:hover ~ nav .slider {
+  left: 42.1%;
+}
+#Gyeonggi:hover ~ nav .slider {
+  left: 47.5%;
+}
+#Gangwon:hover ~ nav .slider {
+  left: 52.85%;
+}
+#Chungbuk:hover ~ nav .slider {
+  left: 58.25%;
+}
+#Chungnam:hover ~ nav .slider {
+  left: 63.6%;
+}
+#Jeonbuk:hover ~ nav .slider {
+  left: 69%;
+}
+#Jeonnam:hover ~ nav .slider {
+  left: 74.35%;
+}
+#Gyeongbuk:hover ~ nav .slider {
+  left: 79.74%;
+}
+#Gyeongnam:hover ~ nav .slider {
+  left: 85.14%;
+}
+#Jeju:hover ~ nav .slider {
+  left: 90.5%;
+}
+
+
+input[type=radio]{
+  display: none;
+}
+
+  .backgd{
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    background-image: url('photo/nepal.jpg');
+    padding: 10px;
+
+    margin: 10px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
   
-    .search-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-    
-    .search-container form {
-      margin: 0;
-    }
-    
-    .search-container input[type=text] {
-      width: 350px;
-      padding: 10px;
-      border-radius: 25px;
-      border: none;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      outline: none;
-    }
-    
-    .search-container input[type=text]:focus {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
-    
-    .search-container button[type=submit] {
-      background-color: #ffffff;
-      color: #000000;
-      border: none;
-      border-radius: 25px;
-      padding: 10px 20px;
-      margin-left: -50px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    
-    .search-container button[type=submit]:hover {
-      background-color: #000000;
-      color: #ffffff;
-    }
+  .search-container form {
+    margin: 0;
+  }
+  
+  .search-container input[type=text] {
+    width: 350px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+  
+  .search-container input[type=text]:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .search-container button[type=submit] {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: -50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .search-container button[type=submit]:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
 
-    .intro_bg{
-      background-image: url("nepal.jpg");
-      width: 100%;
-      height: 718px;
-    }
+  .intro_bg{
+    background-image: url("photo/nepal.jpg");
+    width: 100%;
+    height: 718px;
+  }
 
-    .header{
-      width:1280px;
-      margin:auto;
-      display:flex;
-      height: 86px;
-    }
+  .header{
+    width:1280px;
+    margin:auto;
+    display:flex;
+    height: 86px;
+  }
 
-    .searchArea{
-      width:300px;
-      height:40px;
-      background: rgb(255, 255, 255);
-      border-radius: 5px;
-      margin-top:24px;
-    }
-    
-    .searchArea > form > input{
-      border:none;
-      width:250px;
-      height:40px;
-      background: rgba(90, 51, 51, 0);
-      color:rgb(0, 0, 0);
-      padding-left:10px;
-    }
+  .searchArea{
+    width:300px;
+    height:40px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top:24px;
+  }
+  
+  .searchArea > form > input{
+    border:none;
+    width:250px;
+    height:40px;
+    background: rgba(90, 51, 51, 0);
+    color:rgb(0, 0, 0);
+    padding-left:10px;
+  }
+  
+  .thumbnail-img{
+
+    width: 200px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 3px;
+  }
+  .lkm{
+    float: left;
+  }

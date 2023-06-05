@@ -1,5 +1,5 @@
 <?php
-include('main/maintop2.php');
+include('main/foodtop.php');
 ?>
 <?php
 

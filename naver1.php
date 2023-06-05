@@ -1,6 +1,6 @@
 <?php
   // 네이버 데이터랩 통합검색어 트렌드 Open API 예제
-include('foodex.php');
+include('main/foodex.php');
   $client_id = "rPPRSaNnnqsTK1FFeTUU";
   $client_secret = "55yx1vqeZ2";
   $_GET["trip"].="맛집";
@@ -32,6 +32,12 @@ include('foodex.php');
         $arr2= $arr["items"][$i];
         print_r($arr2["title"]);
         echo "<br>";
+        if($arr2["link"]==True){
+          echo "<a href=".$arr2["link"].">";
+          print_r($arr2["link"]);
+          echo "</a>";
+          echo "<br>";
+        }
         print_r($arr2["category"]);
         echo "<br>";
         print_r($arr2["address"]);
