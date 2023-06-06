@@ -10,8 +10,8 @@ curl_setopt($ch1, CURLOPT_VERBOSE, 0);
 curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
 $response1 = curl_exec($ch1);
 $arr2= json_decode($response1,true);
-$m=date('n'); //앞에 0이 붙지않은 채 월을 표시
-$d=date('j'); //앞에 0이 붙지않은 채 일을 표시
+$n=date('n'); //앞에 0이 붙지않은 채 월을 표시
+$j=date('j'); //앞에 0이 붙지않은 채 일을 표시
 if($arr2["RESULT"]==True){  //전송된 재난문자 정보가 없는 경우
     echo "".$n."월 1일부터 ".$j."일까지 ".$_GET["weather"]."에 전송된 재난문자정보가 없습니다.";
 }else{                      //전송된 재난문자 정보가 있는 경우
