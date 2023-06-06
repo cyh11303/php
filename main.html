@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-
-   
+  
   </head>
   <body>
     <div class="wrap">
-      <div class="intro_bg">
-        <div class="header">
+      <div class="header">
           <div class="searchArea">
             <form method="POST" action="pro.php" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
@@ -26,129 +24,126 @@
             <li><a href="#">CONTACT</a></li>
           </ul>
         </div>
-        <div class="intro_text">
-          <h1>우리가 맛집 , 여행지 소개해줄게 ! 가라GO ~ </h1>
-          <h4 class="contents1"> 가라GO는 여러분들과 함께 합니다. </h4>
+
+        <div class="section">
+          <input type="radio" name="slide" id="slide01" checked>
+          <input type="radio" name="slide" id="slide02">
+          <input type="radio" name="slide" id="slide03">
+
+          <div class="slidewrap">
+            <ul class="slidelist">
+              <li>
+                <a>
+                  <label for="slide03" class="left"></label>
+                  <img src="photo/beach.jpg">
+                  <label for="slide02" class="right"></label>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <label for="slide01" class="left"></label>
+                  <img src="photo/river.jpg">
+                  <label for="slide03" class="right"></label>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <label for="slide02" class="left"></label>
+                  <img src="photo/road.jpg">
+                  <label for="slide01" class="right"></label>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      
+      <div class="cardbox">
+      <div class="card">
+          <div class="icon_png">
+            <img src="photo/food.png">
+          </div>
+          <div class="contents1_bold">맛집 </div>
+          <div class="contents2">맛집맛집맛집</div>
+          <div class="cardbutton">
+            <button onclick="location.href='nofood.php'">바로가기</button>
+        </div>
+      </div>
         
-      </div>
-      </div>
-      <!-- intro end-->
-      <ul class="amount">
-        <li>
-          <div>
-            <div class="button">
-            <button onclick="location.href='nofood.php'">맛집</button >
-            </div>
-            <div class="result"></div>
+      <div class="card">
+          <div class="icon_png">
+            <img src="photo/tour.png">
           </div>
-        </li>
-        <li>
-          <div>
-            <div class="button">
-              <button onclick="location.href='notrip.php'">여행지</button >
-              </div>
-            <div class="result"></div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div class="button">
-              <button onclick="location.href='noculture.php'">문화재</button >
-              </div>
-            <div class="result"></div>
-          </div>
-        </li>
-        <li>
-            <div>
-              <div class="button">
-                <button onclick="location.href='nofestival.php'">축제</button >
-                </div>
-              <div class="result"></div>
-            </div>
-        </li>
-      </ul>
-      <!-- amount end -->
-
-      <div class="main_text0">
-        <h1>가라GO</h1>
-        <div class="contents1">어디든지 가라GO !!! </div>
-        
-        <ul class="icons">
-          <li>
-            <div class="icon_img">
-              <img src="photo/weather.png">
-            </div>
-            <div class="contents1_bold">오늘의 날씨 </div>
-            <div class="contents2">
-                날씨도 체크하고 여행 떠나자 !
-            </div>
-            <div class="more">
-              <more onclick="location.href='weatherex.php'">more</more >
-            </div>
-          </li>
-
-          <li>
-            <div class="icon_img">
-              <img src="photo/disaster.png">
-            </div>
-            <div class="contents1_bold">안전 안내 문자</div>
-            <div class="contents2">
-                혹시 모를 안전사고를 대비 ! 
-            </div>
-            <div class="more">
-              <more onclick="location.href='messageex.php'">more</more >
-            </div>
-          </li>
-
-          <li>
-            <div class="icon_img">
-              <img src="photo/foodicon1.png">
-            </div>
-            <div class="contents1_bold">인기 맛집 TOP5</div>
-            <div class="contents2">
-              각 지역의 인기 맛집 5곳 추천!
-            </div>
-            <div class="more">
-              <more onclick="location.href='foodex.php'">more</more >
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="main_text1">
-        <h1>SERVICE</h1>
-        <div class="contents1">가라GO는 여러분에게 도움이 될 만한 정보를 주고 싶습니다.</div>
-        <div class="service">
-          <div class="food_photo">
-            <img src=#>
-          </div>
-          <div class="contents2">
-              
-          </div>
+          <div class="contents1_bold">여행지 </div>
+          <div class="contents2">여행지여행지</div>
+          <div class="cardbutton">
+            <button onclick="location.href='notrip.php'">바로가기</button>
         </div>
       </div>
 
-      <div class="main_text2">
-        <ul>
-          <li>
-            <div><h1>CONTACT</h1></div>
-            <div>우리에게 파트너십을 신청하거나, 고객이 되어주세요</div>
-            <div class="more2">더 알아보기</div>
-          </li>
-          <li></li>
-        </ul>
-      </div>
-
-      <div class="footer">
-        <div>가라GO</div>
-        <div> 팀장 : 이근모 
-           <br>
-          Addr. 서울특별시 노원구 월계동 인덕대학교 <br>
-          02 - 920 - 1111 <br>
-          COPYRIGHT 2019. TAMO. ALL RIGHT RESERVED.
+        <div class="card">
+          <div class="icon_png">
+            <img src="photo/tradition.png">
+          </div>
+          <div class="contents1_bold">문화재 </div>
+          <div class="contents2">문화재문화재</div>
+          <div class="cardbutton">
+            <button onclick="location.href='noculture.php'">바로가기</button>
+          </div>
         </div>
+
+        <div class="card">
+          <div class="icon_png">
+            <img src="photo/festival1.png">
+          </div>
+          <div class="contents1_bold">축제 </div>
+          <div class="contents2">축제축제축제</div>
+          <div class="cardbutton">
+            <button onclick="location.href='nofestival.php'">바로가기</button>
       </div>
     </div>
+    </div>
+
+    <ul class="icons">
+      <li>
+        <div class="icon_img">
+          <img src="photo/weather.png">
+        </div>
+        <div class="contents1_bold">오늘의 날씨 </div>
+        <div class="contents2">
+            날씨도 체크하고 여행 떠나자 !
+        </div>
+        <div class="more">
+          <more onclick="location.href='weatherex.php'">more</more >
+        </div>
+      </li>
+
+      <li>
+        <div class="icon_img">
+          <img src="photo/disaster.png">
+        </div>
+        <div class="contents1_bold">안전 안내 문자</div>
+        <div class="contents2">
+            혹시 모를 안전사고를 대비 ! 
+        </div>
+        <div class="more">
+          <more onclick="location.href='messageex.php'">more</more >
+        </div>
+      </li>
+
+      <li>
+        <div class="icon_img">
+          <img src="photo/foodicon1.png">
+        </div>
+        <div class="contents1_bold">인기 맛집 TOP5</div>
+        <div class="contents2">
+          각 지역의 인기 맛집 5곳 추천!
+        </div>
+        <div class="more">
+          <more onclick="location.href='foodex.php'">more</more >
+        </div>
+          </li>
+        </div>
+      </div>
   </body>
 </html>

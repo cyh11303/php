@@ -4,15 +4,11 @@
   list-style: none;
   text-decoration: none;
   border-collapse: collapse;
-  margin:0px;
+  margin: 0px;
   padding: 0px;
   color: #000000;
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: 100;
-}
 .contents1{
   font-size: 20px;
   font-weight: lighter;
@@ -20,39 +16,87 @@ h1 {
 .contents2{
   font-size: 18px;
 }
-.contents3 {
-  font-size: 14px;
-  font-weight: 100;
-}
+
 .contents1_bold{
   font-size: 18px;
   font-weight: bold;
 }
-/* --- */
 
-.result{
-  font-size: 24px;
+.section input[id*="slide"] {
+    display: none;
 }
 
-.intro_bg{
-  background-image: url("photo/nepal.jpg");
+.section .slidewrap {
+  max-width: 1900px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+}
+
+.section .slidelist {
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.section .slidelist > li {
+  display: inline-block;
+  vertical-align: middle;
   width: 100%;
-  height: 718px;
+  transition: all .5s;
 }
+
+.section .slidelist > li > a {
+  display: block;
+  position: relative;
+}
+
+.section .slidelist > li > a img {
+  width: 100%;
+  max-height: 820px;
+}
+
+.section .slidelist label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+
+.section .slidelist .left {
+  left: 30px;
+  background: url("photo/left.png") center center / 100% no-repeat;
+}
+
+.section .slidelist .right {
+  right: 30px;
+  background: url("photo/right.png") center center / 100% no-repeat;
+}
+
+.section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform: translateX(0%);}
+.section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-100%);}
+.section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-200%);}
 
 .header{
-  width:1280px;
-  margin:auto;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   height: 86px;
+  position: fixed;
+  background-color: #ffd8b4;
+  z-index: 3;
 }
 
 .searchArea{
-  width:300px;
+    width:300px;
     height:40px;
     background: rgb(255, 255, 255);
     border-radius: 5px;
     margin-top:24px;
+    margin-left: 100px;
+    padding-left: 0;
 }
 .searchArea > form > input{
   border:none;
@@ -87,8 +131,7 @@ h1 {
 .nav{
   display: flex;
   justify-content: flex-end;
-  width:calc(1000px - 200px);
-  margin-left: 20px;
+  width: 65%;
 }
 .nav > li {
   margin-left: 60px;
@@ -104,45 +147,73 @@ h1 {
   color: #000000;
 }
 
-.amount{
-  position: relative;
-  top:-66px;
-  display: flex;
-  width: 100%; /*좌우 넓이 조정 크롬이냐 엣지냐에 따라 다르기에 추후 조정*/
-  left:-1px;
-  background: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.cardbox {
+  width: 100%;
+  height: auto;
+  display: inline-block;
   margin: auto;
-}
-.amount > li {
-  flex: 1;
-  height: 132px;
-}
-.amount > li > div {
   text-align: center;
-  height:57px;
+  background-color: #f7f7f7;
 }
 
-.amount button {
-  background-color: #ffffff; /*버튼의 색깔*/
-  color: #000000;
-  width:475px; /*좌우 넓이를 조정하면 버튼도 그에 맞게 위에서 지정한 넓이 나누기 4정도로 크기 조정 해줘야함*/
-  height:132px;
-  font-size: 25px;
-  border-left: 2px solid #292828;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
+.card {
+  width: 400px;
+  height: 355px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px #00000015;
+  border-radius: 10px;
+  padding: 40px 30px 50px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-.amount button li:last-child {
-  border-left: none;
+.card:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 4px;
+  background-color:#000000;
+  transition: width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1) 0s;
+  -webkit-transition:width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1) 0s;
 }
-.amount button:hover{
-  background-color: #000000; /*마우스 올렸을 때 색깔*/
+
+
+.icon_png {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+
+.card button {
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-top: 10px;
+} 
+
+.card button:hover {
+  background-color: #000000;
   color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover:after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 
 .intro_text{
@@ -155,27 +226,10 @@ h1 {
   color:#030303;
 }
 
-/* main_text0 */
-
-.main_text0{
-  width: 100%;
-  height:601px;
-  margin-top:-132px;
-  background: #cfdcdf;
-}
-.main_text0 > h1{
-  padding-top:116px;
-  text-align: center;
-}
-.main_text0 > .contents1 {
-  text-align: center;
-}
-
 .icons{
   display: flex;
   width:1280px;
   height: 302px;
-  /* background: orange; */
   margin:auto;
 }
 .icons > li {
@@ -212,77 +266,4 @@ h1 {
 .more:hover{
   background-color: #66edff;
   color: #ffffff;
-}
-/* main_text1*/
-
-.main_text1{
-  width: 100%;
-  height:659px;
-  /* margin-top:-132px; */
-  /* background: #2F7AF4 */
-}
-.main_text1 > h1{
-  padding-top:50px;
-  text-align: center;
-}
-.main_text1 > .contents1 {
-  text-align: center;
-}
-.service {
-  width:1280px;
-  display: flex;
-  margin: 49px auto;
-  height:427px;
-}
-
-.service > .contents2 {
-  padding: 20px;
-}
-.service > .contents2 > h2{
-  margin-bottom: 27px;
-}
-
-/* main_text2 */
-.main_text2 {
-  width:100%;
-  height:418px;
-  background-image: url("image/contact.png");
-}
-
-.main_text2 > ul {
-  display: flex;
-  padding-top:138px;
-}
-
-.main_text2 > ul > li {
-  flex: 1;
-  text-align: center;
-}
-.main_text2 > ul > li > div,
-.main_text2 > ul > li > div > h1{
-  color: #fff;
-}
-.more2{
-  width:220px;
-  height:40px;
-  border: 1px solid #fff;
-  color: #fff;
-  line-height: 40px;
-  cursor: pointer;
-  margin:16px auto;
-}
-
-.footer{
-  display: flex;
-  background: #080808;
-  padding:30px;
-}
-.footer > div:first-child {
-  flex:3;
-  text-align: center;
-  color: #fff;
-}
-.footer > div:last-child {
-  flex:9;
-  color: #fff;
 }
