@@ -16,8 +16,8 @@
         </a>
   </div>
 	<div class="search-container">
-        <form method="GET" action="message.php" >
-            <input type="text" placeholder="검색어를 입력하세요" name="area">
+        <form method="GET" action="weather.php" >
+            <input type="text" placeholder="검색어를 입력하세요" name="weather">
             <button type="submit">검색</button>
         </form>
     </div>

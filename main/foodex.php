@@ -16,8 +16,8 @@
         </a>
   </div>
 	<div class="search-container">
-        <form method="POST" action="pro.php" >
-            <input type="text" placeholder="검색어를 입력하세요" name="search">
+        <form method="GET" action="naver1.php" >
+            <input type="text" placeholder="검색어를 입력하세요" name="trip">
             <button type="submit">검색</button>
         </form>
     </div>
