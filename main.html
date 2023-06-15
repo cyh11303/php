@@ -12,7 +12,7 @@
     <div class="wrap">
       <div class="header">
           <div class="searchArea">
-            <form method="POST" action="pro.php" >
+            <form method="get" action="pro.php" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
             <button type="submit">검색</button>
         </form>
@@ -64,9 +64,9 @@
             <img src="photo/food.png">
           </div>
           <div class="contents1_bold">맛집 </div>
-          <div class="contents2">맛집맛집맛집</div>
+          <div class="contents2">각종 맛집 !</div>
           <div class="cardbutton">
-            <button onclick="location.href='nofood.php'">바로가기</button>
+            <button onclick="location.href='nofood.php?page=1'">바로가기</button>
         </div>
       </div>
         
@@ -75,9 +75,9 @@
             <img src="photo/tour.png">
           </div>
           <div class="contents1_bold">여행지 </div>
-          <div class="contents2">여행지여행지</div>
+          <div class="contents2">어디로 여행갈래 ?</div>
           <div class="cardbutton">
-            <button onclick="location.href='notrip.php'">바로가기</button>
+            <button onclick="location.href='notrip.php?page=1'">바로가기</button>
         </div>
       </div>
 
@@ -86,9 +86,9 @@
             <img src="photo/tradition.png">
           </div>
           <div class="contents1_bold">문화재 </div>
-          <div class="contents2">문화재문화재</div>
+          <div class="contents2">해당지역의 문화재</div>
           <div class="cardbutton">
-            <button onclick="location.href='noculture.php'">바로가기</button>
+            <button onclick="location.href='noculture.php?page=1'">바로가기</button>
           </div>
         </div>
 
@@ -97,53 +97,46 @@
             <img src="photo/festival1.png">
           </div>
           <div class="contents1_bold">축제 </div>
-          <div class="contents2">축제축제축제</div>
+          <div class="contents2">여러지역의 축제</div>
           <div class="cardbutton">
-            <button onclick="location.href='nofestival.php'">바로가기</button>
-      </div>
-    </div>
-    </div>
+            <button onclick="location.href='nofestival.php?page=1'">바로가기</button>
+          </div>
+        </div>
 
-    <ul class="icons">
-      <li>
-        <div class="icon_img">
-          <img src="photo/weather.png">
+        <div class="card">
+          <div class="icon_png">
+            <img src="photo/weather.png">
+          </div>
+          <div class="contents1_bold">오늘의 날씨 </div>
+          <div class="contents2">날씨도 체크하고 여행 떠나자 !</div>
+          <div class="cardbutton">
+            <button onclick="location.href='weatherex.php'">바로가기</button>
+          </div>
         </div>
-        <div class="contents1_bold">오늘의 날씨 </div>
-        <div class="contents2">
-            날씨도 체크하고 여행 떠나자 !
-        </div>
-        <div class="more">
-          <more onclick="location.href='weatherex.php'">more</more >
-        </div>
-      </li>
 
-      <li>
-        <div class="icon_img">
-          <img src="photo/disaster.png">
+        <div class="card">
+          <div class="icon_png">
+            <img src="photo/disaster.png">
+          </div>
+          <div class="contents1_bold">안전 안내 문자 </div>
+          <div class="contents2">혹시 모를 안전사고를 대비 !</div>
+          <div class="cardbutton">
+            <button onclick="location.href='messageex.php'">바로가기</button>
+          </div>
         </div>
-        <div class="contents1_bold">안전 안내 문자</div>
-        <div class="contents2">
-            혹시 모를 안전사고를 대비 ! 
-        </div>
-        <div class="more">
-          <more onclick="location.href='messageex.php'">more</more >
-        </div>
-      </li>
 
-      <li>
-        <div class="icon_img">
-          <img src="photo/foodicon1.png">
+        <div class="card">
+          <div class="icon_png">
+            <img src="photo/foodicon1.png">
+          </div>
+          <div class="contents1_bold">인기 맛집 TOP5 </div>
+          <div class="contents2">각 지역의 인기 맛집 5곳 추천!</div>
+          <div class="cardbutton">
+            <button onclick="location.href='foodex.php'">바로가기</button>
+          </div>
         </div>
-        <div class="contents1_bold">인기 맛집 TOP5</div>
-        <div class="contents2">
-          각 지역의 인기 맛집 5곳 추천!
-        </div>
-        <div class="more">
-          <more onclick="location.href='foodex.php'">more</more >
-        </div>
-          </li>
-        </div>
+
+      
       </div>
   </body>
 </html>

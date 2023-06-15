@@ -1,12 +1,18 @@
 <?php
 include('main/page.php');
-include('main/tripmenutop.php');
+include('main/festivalmenutop.php');
 ?>
-
 <?php
+ini_set( "display_errors", 0 );
 $page = $_GET["page"];
-$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A&contentTypeId=12&areaCode=1";
-include('API/area.php');//지역API
+$a = $_GET["a"];
+include('main/case.php');
+
+if ($_GET["b"]==True)
+    $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=15&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
+else
+    $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=15&areaCode=". $a;
+include('API/area.php');
 ?>
 
 <?php
@@ -70,28 +76,28 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="triptap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
+    <li class="page-item"><a class="page-link" href="festivaltap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a=서울&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="festivaltap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="triptap.php?a=서울&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="festivaltap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$i.'">'.$i.'</a></li>';
         }
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a=서울&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="festivaltap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$next_page.'">Next</a></li>';
       }
 
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a=서울&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="festivaltap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$total_page.'">Last</a></li>';
       }
     ?>
     </ul>

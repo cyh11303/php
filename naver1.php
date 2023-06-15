@@ -1,14 +1,17 @@
 <?php
   // 네이버 데이터랩 통합검색어 트렌드 Open API 예제
+  
 include('main/foodex.php');
   $client_id = "rPPRSaNnnqsTK1FFeTUU";
   $client_secret = "55yx1vqeZ2";
-  $_GET["trip"].="맛집";
-  $encText = urlencode($_GET["trip"]);
+  $_GET["weather"].="맛집";
+  $encText = urlencode($_GET["weather"]);
   $url = "https://openapi.naver.com/v1/search/local.json?query=".$encText."&display=100&start=1&sort=comment"; // json 결과
   
   // $url = "https://openapi.naver.com/v1/search/local=".$encText;
   //echo $url;
+
+
   echo "<br>";
     $is_post = false;
     $ch = curl_init();
@@ -27,23 +30,39 @@ include('main/foodex.php');
     //echo "<br>";
     if($status_code == 200) {
       //echo $response;
+      echo "<style>
+.box52 {
+margin: 2em 1em;
+padding: 1em 2em;
+background-color:#ffd8b4;
+box-shadow: 0 0 6px 1px #faccbc, 0 0 6px 1px #faccbc inset;
+border-radius: 30px;
+}
+</style>";
+
+      
       $arr = json_decode($response,true);
       for( $i=0; $i<5; $i++){
+        echo "<div class='box52'>";
         $arr2= $arr["items"][$i];
         print_r($arr2["title"]);
         echo "<br>";
         if($arr2["link"]==True){
-          echo "<a href=".$arr2["link"].">";
+          echo "<font color='blue'>";
+          
+          echo "<a target='_blank' href=".$arr2["link"].">";
           print_r($arr2["link"]);
+          echo "</font>";
           echo "</a>";
           echo "<br>";
         }
         print_r($arr2["category"]);
         echo "<br>";
         print_r($arr2["address"]);
-        echo "<hr>";
+      echo "</div>";
         }
     } else {
       echo "Error 내용:".$response;
     }
+ 
   ?>

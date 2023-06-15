@@ -1,5 +1,5 @@
 <?php
-include('main/messagetab.php');
+include('main/messageex.php');
 date_default_timezone_set('Asia/Seoul');
 $date=date("Y/m/");
 echo "<h2>전국의 재난 문자 정보입니다.</h2>";

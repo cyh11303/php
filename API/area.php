@@ -14,21 +14,41 @@ $arr = json_decode($response,true);
 
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){
     ?>
+    <p>
+    <div style="display:inline-block;vertical-align:top;">
+    <?php
+    if($arr1["firstimage"]==""){
+    ?>
+    <img src="photo/thum_detail.jpg" class="thumbnail-img">
+    <?php
+    }
+    else{
+    ?>
     <img src=<?php echo $arr1["firstimage"]?> class="thumbnail-img">
     <?php
+    }
+    ?> 
+    </div>
+
+    
+    <?php
+    
         //echo $arr1["firstimage"]."<br>"; //지역의 사진
         
     ?>
-    <div style="font:size 30px;font-weight:bold; color:teal;">
+    <div style="display:inline-block;">
+        <div style="font:size 30px;font-weight:bold; color:teal;">
     <?php
         echo $arr1["title"]."<br>"; //지역의 이름
     ?>
-    </div>
-    <div style="color:DarkGray;">
+        </div>
+        <div style="color:DarkGray;">
     <?php
-        echo $arr1["addr1"]."<hr><br>"; //지역의 주소
+        echo $arr1["addr1"]."<br>"; //지역의 주소
         ?>
         </div>
+    </div>
+    </p>
     <?php
     }
     ?>

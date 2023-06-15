@@ -19,12 +19,14 @@ if(mysqli_connect_errno()){
     // echo "<br>";
   }
 
-
-include('main/case_weather.php');
-//echo $_POST["weather"] ;
+//echo $_GET["weather"] ;
 //echo "<br>";
-
+include('main/case_weather.php');
+//echo $_GET["weather"] ;
+//echo "<br>";
+//echo "<br>";
 $sql = "select * from area where si='".$_GET["weather"]."'";"";
+//$sql = "select * from area where si like '%".$_GET["weather"]."%'";"";
 $result = mysqli_query($connect, $sql);
 while($row = mysqli_fetch_array($result)){
     //echo $row['nx']." ".$row['ny']." ".$row['lng']." ".$row['lat'];
@@ -35,14 +37,22 @@ while($row = mysqli_fetch_array($result)){
 date_default_timezone_set('Asia/Seoul'); //date함수의 기준 값을 서울을 기준으로 설정
 $date=date("Ymd");
 $time=date("H");
+
+//echo $time;
+//echo "<br>";
 // 매시간 30분에 예보 생성, 생성된 예보의 API는 45분부터 사용가능
 if(date("i")<45){ //45분 이전에 사용자가 날씨를 검색 할 시 1시간 전의 예보를 사용
-    $time-=1;     
-    $time.="30";
+    if (($time/10)<1){ 
+        $time-=1;
+        $time="0$time";
+        $time.="30";
+    }else{
+        $time-=1; 
+        $time.="30";
+    }
 }else{            //45분~60분일 경우 새롭게 생성된 예보를 그대로 사용
     $time.="30";
 }
-
 
 
 $apiUrl = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?serviceKey=k2FhBBQxor2i%2B9pBvFADgh%2B6ld8CDQul1g46DdYsfyg40rzqKGlBNpHWPcgV88Nj0FFBbu2iFfC24Q3cNzUCXg%3D%3D&pageNo=1&numOfRows=100&dataType=json&base_date=".$date."&base_time=".$time."&nx=".$nx."&ny=".$ny."";
@@ -63,6 +73,16 @@ $k=0;
 $time1=date("H");
 $time1.="00"; //현재시간이 오후 10시20분일때 time1의 값은 2200이 되도록 설정
 
+echo "<style>
+.box52 {
+margin: 2em 1em;
+padding: 1em 2em;
+background-color:#ffd8b4;
+box-shadow: 0 0 6px 1px #faccbc, 0 0 6px 1px #faccbc inset;
+border-radius: 30px;
+}
+</style>";
+echo "<div class='box52'>";
 for($i=12; $i<18; $i++){ //총 6번 반복하며 각 값을 출력
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
 
@@ -84,7 +104,8 @@ for($i=12; $i<18; $i++){ //총 6번 반복하며 각 값을 출력
     
 }
 
-echo "<hr>";
+echo "</div>";
+echo "<div class='box52'>";
 for($i=18; $i<24; $i++){
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
 
@@ -125,7 +146,8 @@ for($i=18; $i<24; $i++){
     // echo "입니다.";
     // echo "<br>";
 }
-echo "<hr>";
+echo "</div>";
+echo "<div class='box52'>";
 for($i=24; $i<30; $i++){
     $arr2= $arr["response"]["body"]["items"]["item"][$i];
     //1시간 온도 T1H
@@ -144,7 +166,7 @@ for($i=24; $i<30; $i++){
     echo "도입니다.";
     echo "<br>";
 }
-echo "<hr>";
+echo "</div>";
     // for($i=12; $i<30; $i++){
         //if($i>=12 || $i<18){
         //1시간 강수량 RN1
