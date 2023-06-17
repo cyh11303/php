@@ -22,6 +22,26 @@ if(mysqli_connect_errno()){
 //echo $_GET["weather"] ;
 //echo "<br>";
 include('main/case_weather.php');
+echo "<style>
+.b1{
+margin: 20px
+}
+</style>";
+echo "<div class=b1>";
+echo "<h4><center>";
+echo "   ";
+echo "<font color='blue'>";
+if($_GET['location']==TRUE){
+echo $_GET['location'];
+echo "</font>";
+
+}
+echo " > ";
+echo "<font color='blue'>";
+echo $_GET['weather'];
+echo "</font>";
+echo "</center></h4>";
+echo "</div>";
 //echo $_GET["weather"] ;
 //echo "<br>";
 //echo "<br>";
@@ -73,15 +93,23 @@ $k=0;
 $time1=date("H");
 $time1.="00"; //현재시간이 오후 10시20분일때 time1의 값은 2200이 되도록 설정
 
+// echo "<style>
+// .box52 {
+// margin: 2em 1em;
+// padding: 1em 2em;
+// background-color:#ffd8b4;
+// box-shadow: 0 0 6px 1px #faccbc, 0 0 6px 1px #faccbc inset;
+// border-radius: 30px;
+// }
+// </style>";
 echo "<style>
 .box52 {
-margin: 2em 1em;
-padding: 1em 2em;
-background-color:#ffd8b4;
-box-shadow: 0 0 6px 1px #faccbc, 0 0 6px 1px #faccbc inset;
-border-radius: 30px;
-}
-</style>";
+    margin:50px 250px;
+    padding: 1em 2em;
+    background-color:#FFFFFF;
+    box-shadow: 0 0 6px 1px #e7dbdb, 0 0 6px 1px #e7dbdb inset;
+    border-radius: 30px;
+    </style>";
 echo "<div class='box52'>";
 for($i=12; $i<18; $i++){ //총 6번 반복하며 각 값을 출력
     $arr2= $arr["response"]["body"]["items"]["item"][$i];

@@ -1006,7 +1006,7 @@ switch($_GET['weather']){ // $_GET['weather']는 사용자가 입력한 값
         // break;
         //echo "<script>alert('지역명을 입력하여주세요!');</script>";
         
-        echo "광역자치단체(시,도) 구와 같이 입력해주세요";
+        
 }
 echo "<br>";
 ?>

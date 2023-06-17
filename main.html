@@ -10,18 +10,22 @@
   </head>
   <body>
     <div class="wrap">
-      <div class="header">
+      <div class="bighead">
           <div class="searchArea">
-            <form method="get" action="pro.php" >
+            <form method="GET" action="pro.php?location=키워드" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
             <button type="submit">검색</button>
         </form>
           </div>
           <ul class="nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">CONTACT</a></li>
+          <div class="home-button">
+            <a href="main.html">
+              <img src="photo/exlogo.png">
+            </a>
+          </div>
+            <li><a href="weatherex.php">날씨</a></li>
+            <li><a href="messageex.php">재난안전문자</a></li>
+            <li><a href="foodex.php">맛집 TOP5</a></li>
           </ul>
         </div>
 
@@ -59,49 +63,52 @@
       </div>
       
       <div class="cardbox">
-      <div class="card">
-          <div class="icon_png">
-            <img src="photo/food.png">
-          </div>
-          <div class="contents1_bold">맛집 </div>
-          <div class="contents2">각종 맛집 !</div>
-          <div class="cardbutton">
-            <button onclick="location.href='nofood.php?page=1'">바로가기</button>
-        </div>
-      </div>
-        
-      <div class="card">
-          <div class="icon_png">
-            <img src="photo/tour.png">
-          </div>
-          <div class="contents1_bold">여행지 </div>
-          <div class="contents2">어디로 여행갈래 ?</div>
-          <div class="cardbutton">
-            <button onclick="location.href='notrip.php?page=1'">바로가기</button>
-        </div>
-      </div>
-
         <div class="card">
-          <div class="icon_png">
-            <img src="photo/tradition.png">
-          </div>
-          <div class="contents1_bold">문화재 </div>
-          <div class="contents2">해당지역의 문화재</div>
-          <div class="cardbutton">
-            <button onclick="location.href='noculture.php?page=1'">바로가기</button>
+            <div class="icon_png">
+              <img src="photo/food.png">
+            </div>
+            <div class="contents1_bold">맛집 </div>
+            <div class="contents2">각종 맛집 !</div>
+            <div class="cardbutton">
+              <button onclick="location.href='nofood.php?a=서울&b=&page=1&location=맛집&search=서울'">바로가기</button>
           </div>
         </div>
-
+          
         <div class="card">
-          <div class="icon_png">
-            <img src="photo/festival1.png">
-          </div>
-          <div class="contents1_bold">축제 </div>
-          <div class="contents2">여러지역의 축제</div>
-          <div class="cardbutton">
-            <button onclick="location.href='nofestival.php?page=1'">바로가기</button>
+            <div class="icon_png">
+              <img src="photo/tour.png">
+            </div>
+            <div class="contents1_bold">여행지 </div>
+            <div class="contents2">어디로 여행갈래 ?</div>
+            <div class="cardbutton">
+              <button onclick="location.href='notrip.php?a=서울&b=&page=1&location=여행지&search=서울'">바로가기</button>
           </div>
         </div>
+  
+          <div class="card">
+            <div class="icon_png">
+              <img src="photo/tradition.png">
+            </div>
+            <div class="contents1_bold">문화재 </div>
+            <div class="contents2">해당지역의 문화재</div>
+            <div class="cardbutton">
+              <button onclick="location.href='noculture.php?a=서울&b=&page=1&location=문화재&search=서울'">바로가기</button>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="icon_png">
+              <img src="photo/festival1.png">
+            </div>
+            <div class="contents1_bold">축제 </div>
+            <div class="contents2">여러지역의 축제</div>
+            <div class="cardbutton">
+              <button onclick="location.href='nofestival.php?a=서울&b=&page=1&location=축제&search=서울'">바로가기</button>
+            </div>
+          </div>
+  
+
+  
 
         <div class="card">
           <div class="icon_png">

@@ -78,7 +78,6 @@ switch($a){
         $a=39;
         break;
     default:
-        echo "<script>alert('지역명을 입력하여주세요!');</script>";
         //echo "테스트용 확인";
 }
 echo "<br>";

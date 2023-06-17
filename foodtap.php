@@ -1,18 +1,39 @@
 <?php
 include('main/page.php');
 include('main/foodmenutop.php');
+
+
 ?>
 
 <?php
-ini_set( "display_errors", 0 );
+
 $page = $_GET["page"];
 $a = $_GET["a"];
+echo "<h4><center>";
+echo "<font color='blue'>";
+if($_GET['location']==TRUE){
+echo $_GET['location'];
+echo "</font>";
+}
+echo " > ";
+echo "<font color='blue'>";
+echo $_GET['a'];
+echo "</font>";
+
+echo " > ";
+if($_GET['page']==TRUE){
+    echo "<font color='blue'>";
+    echo $_GET['page'];
+    echo "페이지";
+    echo "</font>";
+    }echo "</font>";
+    echo "</center></h4>";
+
+
 include('main/case.php');
 
-if ($_GET["b"]==True)
-    $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
-else
-    $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a;
+$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
+
 include('API/area.php');
 ?>
 

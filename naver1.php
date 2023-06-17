@@ -5,14 +5,32 @@ include('main/foodex.php');
   $client_id = "rPPRSaNnnqsTK1FFeTUU";
   $client_secret = "55yx1vqeZ2";
   $_GET["weather"].="맛집";
+  echo "<style>
+.b1{
+margin: 20px
+}
+</style>";
+echo "<div class=b1>";
+echo "<h4><center>";
+echo "   ";
+echo "<font color='blue'>";
+if($_GET['location']==TRUE){
+echo $_GET['location'];
+echo "</font>";
+
+}
+echo " > ";
+echo "<font color='blue'>";
+echo $_GET['weather'];
+echo "</font>";
+echo "</center></h4>";
+echo "</div>";
   $encText = urlencode($_GET["weather"]);
   $url = "https://openapi.naver.com/v1/search/local.json?query=".$encText."&display=100&start=1&sort=comment"; // json 결과
   
   // $url = "https://openapi.naver.com/v1/search/local=".$encText;
   //echo $url;
 
-
-  echo "<br>";
     $is_post = false;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -31,14 +49,13 @@ include('main/foodex.php');
     if($status_code == 200) {
       //echo $response;
       echo "<style>
-.box52 {
-margin: 2em 1em;
-padding: 1em 2em;
-background-color:#ffd8b4;
-box-shadow: 0 0 6px 1px #faccbc, 0 0 6px 1px #faccbc inset;
-border-radius: 30px;
-}
-</style>";
+      .box52 {
+          margin:50px 250px;
+          padding: 1em 2em;
+          background-color:#FFFFFF;
+          box-shadow: 0 0 6px 1px #e7dbdb, 0 0 6px 1px #e7dbdb inset;
+          border-radius: 30px;
+          </style>";
 
       
       $arr = json_decode($response,true);
@@ -56,8 +73,11 @@ border-radius: 30px;
           echo "</a>";
           echo "<br>";
         }
-        print_r($arr2["category"]);
-        echo "<br>";
+        if($arr2["category"]==True){
+          print_r($arr2["category"]);
+          echo "<br>";
+        }
+        
         print_r($arr2["address"]);
       echo "</div>";
         }

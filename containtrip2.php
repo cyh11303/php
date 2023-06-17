@@ -21,19 +21,82 @@ if($_GET['page']==TRUE){
     echo $_GET['page'];
     echo "페이지";
     echo "</font>";
-    }
-
-    echo "</font>";
+    }echo "</font>";
     echo "</center></h4>";
-
+?>
+<?php
 $page = $_GET["page"];
 $a = $_GET["a"];
 include('main/case.php');
-
 $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=12&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
 
-include('API/area.php');
-?>
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $areaUri);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_VERBOSE, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$response = curl_exec($ch);
+
+$arr = json_decode($response,true);
+
+
+    foreach($arr["response"]["body"]["items"]["item"] as $arr1){
+      $value = $arr1["addr1"];
+  
+      $asdasd=$_GET["a"];
+      if (strpos($value,$asdasd) !== false) {
+    ?>
+    <p>
+    <div style="display:inline-block;vertical-align:top;">
+    <?php
+    if($arr1["firstimage"]==""){
+    ?>
+    <img src="photo/thum_detail.jpg" class="thumbnail-img">
+    <?php
+    }
+    else{
+    ?>
+    <img src=<?php echo $arr1["firstimage"]?> class="thumbnail-img">
+    <?php
+    }
+    ?> 
+    </div>
+
+    
+    <?php
+    
+        //echo $arr1["firstimage"]."<br>"; //지역의 사진
+        
+    ?>
+    <div style="display:inline-block;">
+        <div style="font:size 30px;font-weight:bold; color:teal;">
+    <?php
+        echo $arr1["title"]."<br>"; //지역의 이름
+    ?>
+        </div>
+        <div style="color:DarkGray;">
+    <?php
+        echo $arr1["addr1"]."<br>"; //지역의 주소
+        ?>
+        </div>
+    </div>
+    </p>
+    <?php
+    }
+    else {
+      // echo "<script>alert('해당지역에는 $asdasd 관련된 키워드가 없습니다.');
+      // history.back();
+      // </script>";
+    }
+    
+  }
+
+    ?>
+
+
+
 
 <?php
 // 게시물의 총 갯수
@@ -96,30 +159,29 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="triptap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
+    <li class="page-item"><a class="page-link" href="containtrip2.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="containtrip2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$i.'">'.$i.'</a></li>';
         }
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$next_page.'">Next</a></li>';
       }
 
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$total_page.'">Last</a></li>';
       }
     ?>
     </ul>
 </nav>
- 
