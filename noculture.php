@@ -10,7 +10,7 @@ if($_GET['location']==TRUE){
 }
 echo " > ";
 echo "<font color='blue'>";
-echo $_GET['search'];
+echo $_GET['a'];
 echo "</font>";
 
 echo " > ";

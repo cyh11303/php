@@ -9,8 +9,13 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
 $arr = json_decode($response,true);
 $arr2=$arr["response"]["body"]["totalCount"];
-
-
+echo $arr2;
+if($arr2==0){
+    echo "<script>alert('결과값이 존재하지 않습니다.');
+    history.back();
+    </script>";
+  }
+  
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){
     ?>
     <p>

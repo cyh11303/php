@@ -8,7 +8,7 @@ include('main/foodmenutop.php');
 <?php
 $page = $_GET["page"];
 $a = $_GET["a"];
-echo "<h4>";
+echo "<h4><center>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
 echo $_GET['location'];
@@ -29,7 +29,7 @@ if($_GET['page']==TRUE){
     echo "</font>";
     }
   echo "</font>";
-echo "</h4>";
+echo "</center></h4>";
 include('main/case.php');
 $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
 
@@ -162,28 +162,28 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="containfood2.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&location=맛집&page=1">First</a></li>
+    <li class="page-item"><a class="page-link" href="containfood2.php?&search='.$_GET["search"].'&a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&location=맛집&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="containfood2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfood2.php?&search='.$_GET["search"].'&a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="containfood2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="containfood2.php?&search='.$_GET["search"].'&a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$i.'">'.$i.'</a></li>';
         }
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="containfood2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfood2.php?&search='.$_GET["search"].'&a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$next_page.'">Next</a></li>';
       }
 
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="containfood2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfood2.php?&search='.$_GET["search"].'&a='.$_GET["a"].'&b='.$_GET["b"].'&location=맛집&page='.$total_page.'">Last</a></li>';
       }
     ?>
     </ul>

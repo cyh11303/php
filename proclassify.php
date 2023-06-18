@@ -2,7 +2,7 @@
 include('main/page.php');
 include('main/maintop2.php');
 
-echo "<h6>";
+echo "<h4>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
 echo $_GET['location'];
@@ -21,7 +21,7 @@ if($_GET['page']==TRUE){
     echo "</font>";
     }
 
-echo "</h6>";
+echo "</h4>";
 ?>
 <?php
 

@@ -30,7 +30,7 @@ $page = $_GET["page"];
 $trip = $_GET["search"];
 $Area=urlencode($_GET["search"]);
 $areaUri= "https://apis.data.go.kr/B551011/KorService1/searchKeyword1?serviceKey=k2FhBBQxor2i%2B9pBvFADgh%2B6ld8CDQul1g46DdYsfyg40rzqKGlBNpHWPcgV88Nj0FFBbu2iFfC24Q3cNzUCXg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A&keyword=". $Area ."&contentTypeId=12";
-
+echo $areaUri;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -42,14 +42,13 @@ $response = curl_exec($ch);
 
 $arr = json_decode($response,true);
 $arr2=$arr["response"]["body"]["totalCount"];
-echo $arr2;
 
 
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){
       $value = $arr1["addr1"];
   
       $asdasd=$_GET["search"];
-      if (strpos($value,$asdasd) !== false) {
+      if (strpos($value,$asdasd) == false) {
     ?>
     <p>
     <div style="display:inline-block;vertical-align:top;">
@@ -89,7 +88,7 @@ echo $arr2;
     <?php
     }
     else {
-      // echo "<script>alert('다음페이지가 없습니다');
+      // echo "<script>alert('해당지역에는 $asdasd 관련된 키워드가 없습니다.');
       // history.back();
       // </script>";
     }

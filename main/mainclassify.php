@@ -23,6 +23,7 @@
                 <img src="photo/exlogo.png">
               </a>
             </div>
+            <?php  ini_set( "display_errors", 0 );?>
             <li><a href="containfood.php?search=<?php echo $_GET["search"];?>&page=1&location=맛집">맛집</a></li>
             <li><a href="containtrip.php?search=<?php echo $_GET["search"];?>&page=1&location=여행지">여행지</a></li>
             <li><a href="containculture.php?search=<?php echo $_GET["search"];?>&page=1&location=문화재">문화재</a></li>
@@ -346,10 +347,9 @@
         <li>
           <a href="proclassify.php?a=<?php echo "제주";?>&page=1&search=<?php echo $_GET["search"];?>">제주</a>
           <ul>
-            <li><a href="proclassify.php?a=<?php echo "제주";?>&b=1&page=1&search=<?php echo $_GET["search"];?>">남제주</a></li>
-            <li><a href="proclassify.php?a=<?php echo "제주";?>&b=2&page=1&search=<?php echo $_GET["search"];?>">북제주</a></li>
+           
             <li><a href="proclassify.php?a=<?php echo "제주";?>&b=3&page=1&search=<?php echo $_GET["search"];?>">서귀포</a></li>
-            <li><a href="proclassify.php?a=<?php echo "제주";?>&b=4&page=1&search=<?php echo $_GET["search"];?>">제주</a></li>
+
           </ul>
         </li>
         

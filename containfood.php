@@ -7,6 +7,7 @@ include('main/mainclassify.php');
 <?php
 $page = $_GET["page"];
 $trip = $_GET["search"];
+$search= $_GET["search"];
 echo "<h4><center>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){

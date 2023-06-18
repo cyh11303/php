@@ -23,6 +23,7 @@
                 <img src="photo/exlogo.png">
               </a>
             </div>
+            <?php  ini_set( "display_errors", 0 );?>
             <li><a href="containfood2.php?a=<?php echo $_GET["a"];?>&location=맛집&b=<?php echo $_GET["b"];?>&page=1">맛집</a></li>
             <li><a href="containtrip2.php?a=<?php echo $_GET["a"];?>&location=여행지&b=<?php echo $_GET["b"];?>&page=1">여행지</a></li>
             <li><a href="containculture2.php?a=<?php echo $_GET["a"];?>&location=문화재&b=<?php echo $_GET["b"];?>&page=1">문화재</a></li>
@@ -345,10 +346,8 @@
         <li>
           <a href="foodtap.php?a=<?php echo "제주";?>&location=맛집&b=&page=1">제주</a>
           <ul>
-            <li><a href="foodtap.php?a=<?php echo "제주";?>&location=맛집&b=1&page=1">남제주</a></li>
-            <li><a href="foodtap.php?a=<?php echo "제주";?>&location=맛집&b=2&page=1">북제주</a></li>
             <li><a href="foodtap.php?a=<?php echo "제주";?>&location=맛집&b=3&page=1">서귀포</a></li>
-            <li><a href="foodtap.php?a=<?php echo "제주";?>&location=맛집&b=4&page=1">제주</a></li>
+
           </ul>
         </li>
         
