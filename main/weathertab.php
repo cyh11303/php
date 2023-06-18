@@ -64,7 +64,7 @@
             <li><a href="weather.php?weather=<?php echo "용산구";?>&page=1&location=날씨">용산</a></li>
             <li><a href="weather.php?weather=<?php echo "은평구";?>&page=1&location=날씨">은평</a></li>
             <li><a href="weather.php?weather=<?php echo "종로구";?>&page=1&location=날씨">종로</a></li>
-            <li><a href="weather.php?weather=<?php echo "중구";?>&page=1&location=날씨">중구</a></li>
+            <li><a href="weather.php?weather=<?php echo "서울시 중구";?>&page=1&location=날씨">중구</a></li>
             <li><a href="weather.php?weather=<?php echo "중랑구";?>&page=1&location=날씨">중랑</a></li>
           </ul>
         </li>
@@ -167,7 +167,7 @@
             <li><a href="weather.php?weather=<?php echo "강원도 원주시";?>&page=1&location=날씨">원주</a></li>
             <li><a href="weather.php?weather=<?php echo "강원도 인제군";?>&page=1&location=날씨">인제</a></li>
             <li><a href="weather.php?weather=<?php echo "강원도 정선군";?>&page=1&location=날씨">정선</a></li>
-            <li><a href="weather.php?weather=<?php echo "강원도 철원군";?>&page=1&location=날씨">춸원</a></li>
+            <li><a href="weather.php?weather=<?php echo "강원도 철원군";?>&page=1&location=날씨">철원</a></li>
             <li><a href="weather.php?weather=<?php echo "강원도 춘천시";?>&page=1&location=날씨">춘천</a></li>
             <li><a href="weather.php?weather=<?php echo "강원도 태백시";?>&page=1&location=날씨">태백</a></li>
             <li><a href="weather.php?weather=<?php echo "강원도 평창군";?>&page=1&location=날씨">평창</a></li>
@@ -300,7 +300,7 @@
             <li><a href="weather.php?weather=<?php echo "경상남도 하동군";?>&page=1&location=날씨">하동</a></li>
             <li><a href="weather.php?weather=<?php echo "경상남도 함안군";?>&page=1&location=날씨">함안</a></li>
             <li><a href="weather.php?weather=<?php echo "경상남도 함양군";?>&page=1&location=날씨">함양</a></li>
-            <li><a href="weather.php?weather=<?php echo "경상남도 함천군";?>&page=1&location=날씨">합천</a></li>
+            <li><a href="weather.php?weather=<?php echo "경상남도 합천군";?>&page=1&location=날씨">합천</a></li>
           </ul>
         </li>
         <li>

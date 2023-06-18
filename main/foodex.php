@@ -64,7 +64,7 @@
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "용산구";?>&page=1">용산</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "은평구";?>&page=1">은평</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "종로구";?>&page=1">종로</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "중구";?>&page=1">중구</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "서울시 중구";?>&page=1">중구</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "중랑구";?>&page=1">중랑</a></li>
           </ul>
         </li>
@@ -300,7 +300,7 @@
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "경상남도 하동군";?>&page=1">하동</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "경상남도 함안군";?>&page=1">함안</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "경상남도 함양군";?>&page=1">함양</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "경상남도 함천군";?>&page=1">합천</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "경상남도 합천군";?>&page=1">합천</a></li>
           </ul>
         </li>
         <li>

@@ -64,7 +64,7 @@
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "용산구";?>&page=1">용산</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "은평구";?>&page=1">은평</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "종로구";?>&page=1">종로</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "중구";?>&page=1">중구</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "서울시 중구";?>&page=1">중구</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "중랑구";?>&page=1">중랑</a></li>
           </ul>
         </li>
@@ -300,7 +300,7 @@
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "경상남도 하동군";?>&page=1">하동</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "경상남도 함안군";?>&page=1">함안</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "경상남도 함양군";?>&page=1">함양</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "경상남도 함천군";?>&page=1">합천</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "경상남도 합천군";?>&page=1">합천</a></li>
           </ul>
         </li>
         <li>
@@ -334,19 +334,19 @@
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 담양군";?>&page=1">담양</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 목포시";?>&page=1">목포</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 무안군";?>&page=1">무안</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 보성군";?>0&page=1">보성</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 순천시";?>1&page=1">순천</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 신안군";?>2&page=1">신안</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 여수시";?>3&page=1">여수</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 영광군";?>4&page=1">영광</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 영암군";?>5&page=1">영암</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 완도군";?>6&page=1">완도</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 장성군";?>7&page=1">장성</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 장흥군";?>8&page=1">장흥</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 진도군";?>9&page=1">진도</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 함평군";?>0&page=1">함평</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 해남군";?>1&page=1">해남</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 화순군";?>2&page=1">화순</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 보성군";?>&page=1">보성</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 순천시";?>&page=1">순천</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 신안군";?>&page=1">신안</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 여수시";?>&page=1">여수</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 영광군";?>&page=1">영광</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 영암군";?>&page=1">영암</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 완도군";?>&page=1">완도</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 장성군";?>&page=1">장성</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 장흥군";?>&page=1">장흥</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 진도군";?>&page=1">진도</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 함평군";?>&page=1">함평</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 해남군";?>&page=1">해남</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "전라남도 화순군";?>&page=1">화순</a></li>
           </ul>
         </li>
         <li>

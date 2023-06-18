@@ -162,7 +162,7 @@
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=9&page=1">원주</a></li>
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=10&page=1">인제</a></li>
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=11&page=1">정선</a></li>
-            <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=12&page=1">춸원</a></li>
+            <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=12&page=1">철원</a></li>
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=13&page=1">춘천</a></li>
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=14&page=1">태백</a></li>
             <li><a href="triptap.php?a=<?php echo "강원";?>&location=여행지&b=15&page=1">평창</a></li>

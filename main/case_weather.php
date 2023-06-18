@@ -103,7 +103,8 @@ switch($_GET['weather']){ // $_GET['weather']는 사용자가 입력한 값
          $_GET['wearher']="종로구";
          break;
     case "중구":
-        $_GET['weather']="중구";
+    case "서울시 중구":
+        $_GET['weather']="서울특별시 중구";
         break;
     case "중랑구":
     case "중랑":
@@ -995,8 +996,8 @@ switch($_GET['weather']){ // $_GET['weather']는 사용자가 입력한 값
         break;
             
     case "제주":
-    case "제주광역시":
-        $_GET['weather']="제주광역시";
+    case "제주특별자치도":
+        $_GET['weather']="제주특별자치도";
         break;
     // case "서귀포시":
     // case "서귀포":

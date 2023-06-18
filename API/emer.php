@@ -24,7 +24,9 @@ $n=date('n'); //앞에 0이 붙지않은 채 월을 표시
 $j=date('j'); //앞에 0이 붙지않은 채 일을 표시
 
 if($arr2["RESULT"]==True){  //전송된 재난문자확인 정보가 없는 경우
+    echo "<h3><center>";
     echo "".$n."월 1일부터 ".$j."일까지 ".$_GET["weather"]."에 전송된 재난문자확인정보가 없습니다.";
+    echo "</center></h3>";
 }else{                      //전송된 재난문자확인 정보가 있는 경우
     foreach($arr2["DisasterMsg2"][1]["row"] as $arr3){
         echo "<div class='box52'>";
