@@ -7,9 +7,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-$arr2=$arr["response"]["body"]["totalCount"];
 $arr = json_decode($response,true);
-
+$arr2=$arr["response"]["body"]["totalCount"];
 
 
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){

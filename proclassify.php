@@ -41,10 +41,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-$arr2=$arr["response"]["body"]["totalCount"];
-echo $arr2;
 $arr = json_decode($response,true);
-
+$arr2=$arr["response"]["body"]["totalCount"];
 
 $some = 0;
 foreach($arr["response"]["body"]["items"]["item"] as $arr1){
@@ -124,11 +122,11 @@ if($some == 0){
             <span aria-hidden="true">«</span>
           </a>
         </li>
-        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&page=1">1</a></li>
-        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&page=2">2</a></li>
-        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&page=3">3</a></li>
-        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&page=4">4</a></li>
-        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&page=5">5</a></li>
+        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&location=키워드&page=1">1</a></li>
+        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&location=키워드&page=2">2</a></li>
+        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&location=키워드&page=3">3</a></li>
+        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&location=키워드&page=4">4</a></li>
+        <li class="page-item"><a class="page-link" href="pro2.php?search=<?php echo $Area;?>&location=키워드&page=5">5</a></li>
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true">»</span>

@@ -96,28 +96,28 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="triptap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
+    <li class="page-item"><a class="page-link" href="triptap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&location=여행지&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=여행지&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=여행지&page='.$i.'">'.$i.'</a></li>';
         }
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=여행지&page='.$next_page.'">Next</a></li>';
       }
 
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="triptap.php?a='.$_GET["a"].'&b='.$_GET["b"].'&location=여행지&page='.$total_page.'">Last</a></li>';
       }
     ?>
     </ul>
