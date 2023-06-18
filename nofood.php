@@ -7,6 +7,13 @@ include('main/foodmenutop.php');
 <?php
 $page = $_GET["page"];
 $a = $_GET["a"];
+echo "<style>
+.b1{
+margin: 20px
+}
+</style>";
+echo "<div class=b1>";
+echo "<h3>hello</h3>";
 echo "<h4><center>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
@@ -28,6 +35,7 @@ if($_GET['page']==TRUE){
 
     echo "</font>";
     echo "</center></h4>";
+    echo "</div>";
 include('main/case.php');
 $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A&contentTypeId=39&areaCode=" .$a;
 include('API/area.php');//지역API
@@ -36,8 +44,8 @@ include('API/area.php');//지역API
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 

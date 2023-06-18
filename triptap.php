@@ -37,8 +37,8 @@ include('API/area.php');
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total = $arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 

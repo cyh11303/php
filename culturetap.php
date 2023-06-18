@@ -38,8 +38,8 @@ include('API/area.php');
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 
@@ -54,8 +54,8 @@ $end = (($start + $limit) > $total) ? $total : ($start + $limit);
 
 // 1 2 3 4 5  =====  6 7 8 9 10
 // 총 페이지 수
-$total_page = ceil($total / $limit);
-
+//$total_page = ceil($total / $limit);
+$total=$arr2;
 // 1 1
 // 2 1
 // 3 1

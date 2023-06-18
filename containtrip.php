@@ -39,7 +39,7 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-
+$arr2=$arr["response"]["body"]["totalCount"];
 $arr = json_decode($response,true);
 
 
@@ -47,7 +47,7 @@ $arr = json_decode($response,true);
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){
       $value = $arr1["addr1"];
   
-      $asdasd=$_GET["a"];
+      $asdasd=$_GET["search"];
       if (strpos($value,$asdasd) !== false) {
     ?>
     <p>
@@ -88,9 +88,9 @@ $arr = json_decode($response,true);
     <?php
     }
     else {
-      // echo "<script>alert('해당지역에는 $asdasd 관련된 키워드가 없습니다.');
-      // history.back();
-      // </script>";
+      echo "<script>alert('다음페이지가 없습니다');
+      history.back();
+      </script>";
     }
     
   }
@@ -102,8 +102,8 @@ $arr = json_decode($response,true);
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 
@@ -161,29 +161,33 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="foodtap.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
+  <li class="page-item"><a class="page-link" href="containtrip.php?search=<?php echo $_GET["search"];?>&location=여행지&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="foodtap.php?a=서울&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip.php?search='.$_GET["search"].'&location=여행지&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="foodtap.php?a=서울&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="containtrip.php?search='.$_GET["search"].'&location=여행지&page='.$i.'">'.$i.'</a></li>';  
+
         }
+
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="foodtap.php?a=서울&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip.php?search='.$_GET["search"].'&location=여행지&page='.$next_page.'">Next</a></li>';
       }
 
+
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="foodtap.php?a=서울&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containtrip.php?search='.$_GET["search"].'&location=여행지&page='.$total_page.'">Last</a></li>';
       }
+
     ?>
     </ul>
 </nav>

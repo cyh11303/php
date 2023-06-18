@@ -1,8 +1,9 @@
 <?php
 include('main/page.php');
-include('main/festivalmenutop.php');
+include('main/mainclassify.php');
 
-echo "<h6>";
+echo "<h4><center>";
+
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
 echo $_GET['location'];
@@ -10,7 +11,7 @@ echo "</font>";
 }
 echo " > ";
 echo "<font color='blue'>";
-echo $_GET['a'];
+echo $_GET['search'];
 echo "</font>";
 
 echo " > ";
@@ -26,9 +27,9 @@ if($_GET['page']==TRUE){
 ?>
 <?php
 $page = $_GET["page"];
-$a = $_GET["a"];
+$a = $_GET["search"];
 include('main/case.php');
-$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=15&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
+$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=15&areaCode=".$a."";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -38,14 +39,14 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-
+$arr2=$arr["response"]["body"]["totalCount"];
 $arr = json_decode($response,true);
 
 
     foreach($arr["response"]["body"]["items"]["item"] as $arr1){
       $value = $arr1["addr1"];
   
-      $asdasd=$_GET["a"];
+      $asdasd=$_GET["search"];
       if (strpos($value,$asdasd) !== false) {
     ?>
     <p>
@@ -100,8 +101,8 @@ $arr = json_decode($response,true);
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 
@@ -159,29 +160,33 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="containfestival2.php?a=<?php echo $_GET["a"];?>&b=<?php echo $_GET["b"];?>&page=1">First</a></li>
+  <li class="page-item"><a class="page-link" href="containfestival.php?search=<?php echo $_GET["search"];?>&location=축제&page=1">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="containfestival2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfestival.php?search='.$_GET["search"].'&location=축제&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="containfestival2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="containfestival.php?search='.$_GET["search"].'&location=축제&page='.$i.'">'.$i.'</a></li>';  
+
         }
+
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="containfestival2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfestival.php?search='.$_GET["search"].'&location=축제&page='.$next_page.'">Next</a></li>';
       }
 
+
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="containfestival2.php?a='.$_GET["a"].'&b='.$_GET["b"].'&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="containfestival.php?search='.$_GET["search"].'&location=축제&page='.$total_page.'">Last</a></li>';
       }
+
     ?>
     </ul>
 </nav>

@@ -41,7 +41,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-
+$arr2=$arr["response"]["body"]["totalCount"];
+echo $arr2;
 $arr = json_decode($response,true);
 
 

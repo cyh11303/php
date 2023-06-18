@@ -6,25 +6,27 @@ include('main/foodex.php');
   $client_secret = "55yx1vqeZ2";
   $_GET["weather"].="맛집";
   echo "<style>
-.b1{
-margin: 20px
-}
-</style>";
-echo "<div class=b1>";
-echo "<h4><center>";
-echo "   ";
-echo "<font color='blue'>";
-if($_GET['location']==TRUE){
-echo $_GET['location'];
-echo "</font>";
+  .b1{
+  margin: 20px
+  }
+  </style>";
+  echo "<div class=b1>";
+  echo "<h4><center>";
+  echo "   ";
+  echo "<font color='blue'>";
+  if($_GET['location']==TRUE){
+  echo $_GET['location'];
+  echo "</font>";
 
-}
-echo " > ";
-echo "<font color='blue'>";
-echo $_GET['weather'];
-echo "</font>";
-echo "</center></h4>";
-echo "</div>";
+  }
+  echo " > ";
+  echo "<font color='blue'>";
+  echo $_GET['weather'];
+  echo "</font>";
+  echo "</center></h4>";
+  echo "</div>";
+
+  
   $encText = urlencode($_GET["weather"]);
   $url = "https://openapi.naver.com/v1/search/local.json?query=".$encText."&display=100&start=1&sort=comment"; // json 결과
   

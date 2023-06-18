@@ -8,7 +8,7 @@ include('main/foodmenutop.php');
 <?php
 $page = $_GET["page"];
 $a = $_GET["a"];
-echo "<h4><center>";
+echo "<h4>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
 echo $_GET['location'];
@@ -28,6 +28,8 @@ if($_GET['page']==TRUE){
     echo "페이지";
     echo "</font>";
     }
+  echo "</font>";
+echo "</h4>";
 include('main/case.php');
 $areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=10&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a ."&sigunguCode=" . $_GET["b"];
 
@@ -39,7 +41,7 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $response = curl_exec($ch);
-
+$arr2=$arr["response"]["body"]["totalCount"];
 $arr = json_decode($response,true);
 
 
@@ -102,8 +104,8 @@ $arr = json_decode($response,true);
 
 <?php
 // 게시물의 총 갯수
-$total = count($arr1) * 10;
-
+//$total = count($arr1) * 10;
+$total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;
 

@@ -23,8 +23,9 @@
                 <img src="photo/exlogo.png">
               </a>
             </div>
+            
             <li><a href="containfood.php?search=<?php echo $_GET["search"];?>&location=맛집&page=1">맛집</a></li>
-            <li><a href="containtirp.php?search=<?php echo $_GET["search"];?>&location=여행지&page=1">여행지</a></li>
+            <li><a href="containtrip.php?search=<?php echo $_GET["search"];?>&location=여행지&page=1">여행지</a></li>
             <li><a href="containculture.php?search=<?php echo $_GET["search"];?>&location=문화재&page=1">문화재</a></li>
             <li><a href="containfestival.php?search=<?php echo $_GET["search"];?>&location=축제&page=1">축제</a></li>
           </ul>
