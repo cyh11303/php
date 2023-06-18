@@ -238,12 +238,12 @@
             <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=7&page=1">서산</a></li>
             <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=8&page=1">서천</a></li>
             <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=9&page=1">아산</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=10&page=1">예산</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=11&page=1">천안</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=12&page=1">청양</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=13&page=1">태안</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=14&page=1">홍성</a></li>
-            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=15&page=1">계롱</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=11&page=1">예산</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=12&page=1">천안</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=13&page=1">청양</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=14&page=1">태안</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=15&page=1">홍성</a></li>
+            <li><a href="culturetap.php?a=<?php echo "충남";?>&location=문화재&b=16&page=1">계롱</a></li>
           </ul>
         </li>
         <li>
@@ -334,15 +334,15 @@
             <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=11&page=1">순천</a></li>
             <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=12&page=1">신안</a></li>
             <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=13&page=1">여수</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=14&page=1">영광</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=15&page=1">영암</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=16&page=1">완도</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=17&page=1">장성</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=18&page=1">장흥</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=19&page=1">진도</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=20&page=1">함평</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=21&page=1">해남</a></li>
-            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=22&page=1">화순</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=16&page=1">영광</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=17&page=1">영암</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=18&page=1">완도</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=19&page=1">장성</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=20&page=1">장흥</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=21&page=1">진도</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=22&page=1">함평</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=23&page=1">해남</a></li>
+            <li><a href="culturetap.php?a=<?php echo "전남";?>&location=문화재&b=24&page=1">화순</a></li>
           </ul>
         </li>
         <li>

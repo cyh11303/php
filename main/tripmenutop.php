@@ -319,28 +319,31 @@
         <li>
           <a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=&page=1">전남</a>
           <ul>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=1&page=1">강진</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=2&page=1">고흥</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=3&page=1">곡성</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=4&page=1">광양</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=5&page=1">구례</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=6&page=1">나주</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=7&page=1">담양</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=8&page=1">목포</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=9&page=1">무안</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=10&page=1">보성</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=11&page=1">순천</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=12&page=1">신안</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=13&page=1">여수</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=14&page=1">영광</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=15&page=1">영암</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=16&page=1">완도</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=17&page=1">장성</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=18&page=1">장흥</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=19&page=1">진도</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=20&page=1">함평</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=21&page=1">해남</a></li>
-            <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=22&page=1">화순</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=1&page=1">강진</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=2&page=1">고흥</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=3&page=1">곡성</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=4&page=1">광양</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=5&page=1">구례</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=6&page=1">나주</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=7&page=1">담양</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=8&page=1">목포</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=9&page=1">무안</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=10&page=1">보성</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=11&page=1">순천</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=12&page=1">신안</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=13&page=1">여수</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=16&page=1">영광</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=17&page=1">영암</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=18&page=1">완도</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=19&page=1">장성</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=20&page=1">장흥</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=21&page=1">진도</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=22&page=1">함평</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=23&page=1">해남</a></li>
+          <li><a href="triptap.php?a=<?php echo "전남";?>&location=여행지&b=24&page=1">화순</a></li>
+접기
+eff614d93723c91d.txt
+3KB
           </ul>
         </li>
         <li>

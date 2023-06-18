@@ -237,12 +237,12 @@
             <li><a href="proclassify.php?a=<?php echo "충남";?>&b=7&page=1&search=<?php echo $_GET["search"];?>">서산</a></li>
             <li><a href="proclassify.php?a=<?php echo "충남";?>&b=8&page=1&search=<?php echo $_GET["search"];?>">서천</a></li>
             <li><a href="proclassify.php?a=<?php echo "충남";?>&b=9&page=1&search=<?php echo $_GET["search"];?>">아산</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=10&page=1&search=<?php echo $_GET["search"];?>">예산</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>">천안</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>">청양</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>">태안</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>">홍성</a></li>
-            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>">계롱</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>">예산</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>">천안</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>">청양</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>">태안</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>">홍성</a></li>
+            <li><a href="proclassify.php?a=<?php echo "충남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>">계롱</a></li>
           </ul>
         </li>
         <li>
@@ -320,7 +320,7 @@
         <li>
           <a href="proclassify.php?a=<?php echo "전남";?>&page=1&search=<?php echo $_GET["search"];?>">전남</a>
           <ul>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=1&page=1&search=<?php echo $_GET["search"];?>">강진</a></li>
+          <li><a href="proclassify.php?a=<?php echo "전남";?>&b=1&page=1&search=<?php echo $_GET["search"];?>">강진</a></li>
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=2&page=1&search=<?php echo $_GET["search"];?>">고흥</a></li>
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=3&page=1&search=<?php echo $_GET["search"];?>">곡성</a></li>
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=4&page=1&search=<?php echo $_GET["search"];?>">광양</a></li>
@@ -333,15 +333,18 @@
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>">순천</a></li>
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>">신안</a></li>
             <li><a href="proclassify.php?a=<?php echo "전남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>">여수</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>">영광</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>">영암</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>">완도</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=17&page=1&search=<?php echo $_GET["search"];?>">장성</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=18&page=1&search=<?php echo $_GET["search"];?>">장흥</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=19&page=1&search=<?php echo $_GET["search"];?>">진도</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=20&page=1&search=<?php echo $_GET["search"];?>">함평</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=21&page=1&search=<?php echo $_GET["search"];?>">해남</a></li>
-            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=22&page=1&search=<?php echo $_GET["search"];?>">화순</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>">영광</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=17&page=1&search=<?php echo $_GET["search"];?>">영암</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=18&page=1&search=<?php echo $_GET["search"];?>">완도</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=19&page=1&search=<?php echo $_GET["search"];?>">장성</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=20&page=1&search=<?php echo $_GET["search"];?>">장흥</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=21&page=1&search=<?php echo $_GET["search"];?>">진도</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=22&page=1&search=<?php echo $_GET["search"];?>">함평</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=23&page=1&search=<?php echo $_GET["search"];?>">해남</a></li>
+            <li><a href="proclassify.php?a=<?php echo "전남";?>&b=24&page=1&search=<?php echo $_GET["search"];?>">화순</a></li>
+접기
+807fcec249e346e3.txt
+3KB
           </ul>
         </li>
         <li>

@@ -45,7 +45,7 @@ $arr2=$arr["response"]["body"]["totalCount"];
       $value = $arr1["addr1"];
   
       $asdasd=$_GET["a"];
-      if (strpos($value,$asdasd) !== false) {
+      if (strpos($value,$asdasd)== false) {
     ?>
     <p>
     <div style="display:inline-block;vertical-align:top;">

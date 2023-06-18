@@ -7,7 +7,6 @@ include('main/mainclassify.php');
 <?php
 $page = $_GET["page"];
 $trip = $_GET["search"];
-$search= $_GET["search"];
 echo "<h4><center>";
 echo "<font color='blue'>";
 if($_GET['location']==TRUE){
@@ -50,7 +49,7 @@ $arr2=$arr["response"]["body"]["totalCount"];
       $value = $arr1["addr1"];
   
       $asdasd=$_GET["search"];
-      if (strpos($value,$asdasd) !== false) {
+      if (strpos($value,$asdasd)== false) {
     ?>
     <p>
     <div style="display:inline-block;vertical-align:top;">

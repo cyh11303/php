@@ -236,12 +236,12 @@
             <li><a href="pro2.php?a=<?php echo "충남";?>&b=7&page=1&search=<?php echo $_GET["search"];?>&location=키워드">서산</a></li>
             <li><a href="pro2.php?a=<?php echo "충남";?>&b=8&page=1&search=<?php echo $_GET["search"];?>&location=키워드">서천</a></li>
             <li><a href="pro2.php?a=<?php echo "충남";?>&b=9&page=1&search=<?php echo $_GET["search"];?>&location=키워드">아산</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=10&page=1&search=<?php echo $_GET["search"];?>&location=키워드">예산</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>&location=키워드">천안</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>&location=키워드">청양</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>&location=키워드">태안</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>&location=키워드">홍성</a></li>
-            <li><a href="pro2.php?a=<?php echo "충남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>&location=키워드">계롱</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>&location=키워드">예산</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>&location=키워드">천안</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>&location=키워드">청양</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>&location=키워드">태안</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>&location=키워드">홍성</a></li>
+            <li><a href="pro2.php?a=<?php echo "충남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>&location=키워드">계롱</a></li>
           </ul>
         </li>
         <li>
@@ -319,7 +319,7 @@
         <li>
           <li><a href="pro2.php?a=<?php echo "전남";?>&b=&page=1&search=<?php echo $_GET["search"];?>&location=키워드">전남</a>
           <ul>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=1&page=1&search=<?php echo $_GET["search"];?>&location=키워드">강진</a></li>
+          <li><a href="pro2.php?a=<?php echo "전남";?>&b=1&page=1&search=<?php echo $_GET["search"];?>&location=키워드">강진</a></li>
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=2&page=1&search=<?php echo $_GET["search"];?>&location=키워드">고흥</a></li>
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=3&page=1&search=<?php echo $_GET["search"];?>&location=키워드">곡성</a></li>
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=4&page=1&search=<?php echo $_GET["search"];?>&location=키워드">광양</a></li>
@@ -332,15 +332,18 @@
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=11&page=1&search=<?php echo $_GET["search"];?>&location=키워드">순천</a></li>
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=12&page=1&search=<?php echo $_GET["search"];?>&location=키워드">신안</a></li>
             <li><a href="pro2.php?a=<?php echo "전남";?>&b=13&page=1&search=<?php echo $_GET["search"];?>&location=키워드">여수</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=14&page=1&search=<?php echo $_GET["search"];?>&location=키워드">영광</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=15&page=1&search=<?php echo $_GET["search"];?>&location=키워드">영암</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>&location=키워드">완도</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=17&page=1&search=<?php echo $_GET["search"];?>&location=키워드">장성</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=18&page=1&search=<?php echo $_GET["search"];?>&location=키워드">장흥</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=19&page=1&search=<?php echo $_GET["search"];?>&location=키워드">진도</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=20&page=1&search=<?php echo $_GET["search"];?>&location=키워드">함평</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=21&page=1&search=<?php echo $_GET["search"];?>&location=키워드">해남</a></li>
-            <li><a href="pro2.php?a=<?php echo "전남";?>&b=22&page=1&search=<?php echo $_GET["search"];?>&location=키워드">화순</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=16&page=1&search=<?php echo $_GET["search"];?>&location=키워드">영광</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=17&page=1&search=<?php echo $_GET["search"];?>&location=키워드">영암</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=18&page=1&search=<?php echo $_GET["search"];?>&location=키워드">완도</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=19&page=1&search=<?php echo $_GET["search"];?>&location=키워드">장성</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=20&page=1&search=<?php echo $_GET["search"];?>&location=키워드">장흥</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=21&page=1&search=<?php echo $_GET["search"];?>&location=키워드">진도</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=22&page=1&search=<?php echo $_GET["search"];?>&location=키워드">함평</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=23&page=1&search=<?php echo $_GET["search"];?>&location=키워드">해남</a></li>
+            <li><a href="pro2.php?a=<?php echo "전남";?>&b=24&page=1&search=<?php echo $_GET["search"];?>&location=키워드">화순</a></li>
+접기
+2.txt
+4KB
           </ul>
         </li>
         <li>
