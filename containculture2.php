@@ -101,7 +101,8 @@ $arr2=$arr["response"]["body"]["totalCount"];
 
 <?php
 // 게시물의 총 갯수
-//$total = count($arr1) * 10;
+//기존의 $total = count($arr1) * 10;
+//$arr2은 $arr["response"]["body"]["totalCount"]로 배열에 들어있는 값의 수를 나타낸다.
 $total=$arr2;
 // 한 화면 출력 갯수
 $limit = 10;

@@ -334,19 +334,19 @@
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 담양군";?>&page=1">담양</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 목포시";?>&page=1">목포</a></li>
             <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 무안군";?>&page=1">무안</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 보성군";?>0&page=1">보성</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 순천시";?>1&page=1">순천</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 신안군";?>2&page=1">신안</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 여수시";?>3&page=1">여수</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 영광군";?>4&page=1">영광</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 영암군";?>5&page=1">영암</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 완도군";?>6&page=1">완도</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 장성군";?>7&page=1">장성</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 장흥군";?>8&page=1">장흥</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 진도군";?>9&page=1">진도</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 함평군";?>0&page=1">함평</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 해남군";?>1&page=1">해남</a></li>
-            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 화순군";?>2&page=1">화순</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 보성군";?>&page=1">보성</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 순천시";?>&page=1">순천</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 신안군";?>&page=1">신안</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 여수시";?>&page=1">여수</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 영광군";?>&page=1">영광</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 영암군";?>&page=1">영암</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 완도군";?>&page=1">완도</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 장성군";?>&page=1">장성</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 장흥군";?>&page=1">장흥</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 진도군";?>&page=1">진도</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 함평군";?>&page=1">함평</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 해남군";?>&page=1">해남</a></li>
+            <li><a href="naver1.php?&location=맛집 TOP5&weather=<?php echo "전라남도 화순군";?>&page=1">화순</a></li>
           </ul>
         </li>
         <li>
