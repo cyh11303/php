@@ -1,23 +1,25 @@
 main.html : 메인홈페이지
 pro.php : 메인홈페이지에서 검색 시 이동, 검색 한 키워드 결과 값이 출력되는 페이지
-pro2.php : pro.php에서 지역을 선택했을 경우 이동, 선택한 지역에서 키워드 결과 값이 출력되는 페이지
+pro2.php : pro.php에서 지역을 선택했을 경우 이동, 선택한 지역에서 키워드 결과 값으로 필터링되어 출력되는 페이지
+proclassify.php : pro.php에서 검색한후 , 상단의 4가지 탭을 클릭후 키워드가 유지되면서 지역으로 필터링하는 페이지
+procode.php : 선택된 탭에서 키워드를 검색할시 선택한 키워드가 그대로 유지되는 코드
 
 containtrip.php : pro.php에서 우측 상단 여행지를 클릭 할 시 이동, 키워드 결과값의 여행지가 출력되는 페이지
 containfood.php : pro.php에서 우측 상단 맛집 클릭 할 시 이동, 키워드 결과값의 맛집이 출력되는 페이지
 containfestival.php : pro.php에서 우측 상단 축제를 클릭 할 시 이동, 키워드 결과값의 축제가 출력되는 페이지
 containculture.php : pro.php에서 우측 상단 문화재를 클릭 할 시 이동, 키워드 결과값의 문화재가 출력되는 페이지
 
-containtrip2.php : pro2.php에서 우측 상단 여행지를 클릭 할 시 이동, 선택한 지역에서 키워드 결과 값의 여행지가 출력되는 페이지
-containfood2.php : pro2.php에서 우측 상단 맛집 클릭 할 시 이동, 선택한 지역에서 키워드 결과 값의 맛집이 출력되는 페이지
-containfestival2.php : pro2.php에서 우측 상단 축제를 클릭 할 시 이동, 선택한 지역에서 키워드 결과 값의 축제가 출력되는 페이지
-containculture2.php : pro2.php에서 우측 상단 문화재를 클릭 할 시 이동, 선택한 지역에서 키워드 결과 값의 문화재가 출력되는 페이지
+containtrip2.php :      pro2.php에서 우측 상단 여행지를 클릭 할 시 이동,  선택한 지역에서 키워드 결과 값의 여행지가 출력되는 페이지
+containfood2.php :    pro2.php에서 우측 상단  맛집 클릭 할 시 이동     ,  선택한 지역에서 키워드 결과 값의 맛집이 출력되는 페이지
+containfestival2.php : pro2.php에서 우측 상단 축제를 클릭 할 시 이동   ,  선택한 지역에서 키워드 결과 값의 축제가 출력되는 페이지
+containculture2.php : pro2.php에서 우측 상단 문화재를 클릭 할 시 이동,  선택한 지역에서 키워드 결과 값의 문화재가 출력되는 페이지
 
 nofood.php : 메인홈페이지에서 맛집 클릭 시 이동, 전국의 맛집 정보가 출력되는 페이지
 notrip.php : 메인홈페이지에서 여행지 클릭 시 이동, 전국의 여행지 정보가 출력되는 페이지
 noculture.php : 메인홈페이지에서 문화재 클릭 시 이동, 전국의 문화재 정보가 출력되는 페이지
 nofestival.php :메인홈페이지에서 축제 클릭 시 이동, 전국의 축제 정보가 출력되는 페이지
 
-foodtap.php : containfood.php,containfood2.php, nofood.php 에서 지역 클릭 시 이동
+foodtap.php : containfood.php,containfood2.php, nofood.php 에서 지역 클릭 시 이동 
 triptap.php : containtrip.php,containtrip2.php, notrip.php 에서 지역 클릭 시 이동
 culturetap.php : containculture.php,containculture2.php, noculture.php 에서 지역 클릭 시 이동
 festivaltap.php : containfestival.php,containfestival2.php, nofestival.php 에서 지역 클릭 시 이동
@@ -29,3 +31,6 @@ foodex.php : 메인 홈페이지에서 맛집TOP5 클릭 시 이동
 weather.php : weatherex에서 선택한 지역의 날씨를 출력되는 페이지
 message.php : messageex에서 선택한 지역의 재난문자정보를 출력되는 페이지
 naver1.php : foodex에서 선택한 지역의 맛집 TOP5을 출력되는 페이지
+
+API  : 날씨 및 재난안전문자 API
+main : 각 페이지의 상단부분(네비게이션바, 페이지네이션, 상단 검색 바)

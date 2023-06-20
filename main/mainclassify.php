@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <?php
+ ini_set( "display_errors", 0 );
     switch($_GET["location"]){
       case "여행지":
         $code = 12;
@@ -33,6 +34,7 @@
             <form method="get" action="procode.php?page=1" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
             <input type="hidden" name="code" value= <?php echo $code ?>>
+            <input type="hidden" name="location" value= <?php echo $_GET["location"] ?>>
             <button type="submit">검색</button>
         </form>
           </div>
@@ -42,7 +44,7 @@
                 <img src="photo/exlogo.png">
               </a>
             </div>
-            <?php  //ini_set( "display_errors", 0 );?>
+
             <li><a href="containfood.php?search=<?php echo $_GET["search"];?>&page=1&location=맛집">맛집</a></li>
             <li><a href="containtrip.php?search=<?php echo $_GET["search"];?>&page=1&location=여행지">여행지</a></li>
             <li><a href="containculture.php?search=<?php echo $_GET["search"];?>&page=1&location=문화재">문화재</a></li>
