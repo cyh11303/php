@@ -64,7 +64,7 @@
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "용산구";?>&page=1">용산</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "은평구";?>&page=1">은평</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "종로구";?>&page=1">종로</a></li>
-            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "서울시 중구";?>&page=1">중구</a></li>
+            <li><a href="message.php?&location=재난문자확인&weather=<?php echo "서울특별시 중구";?>&page=1">중구</a></li>
             <li><a href="message.php?&location=재난문자확인&weather=<?php echo "중랑구";?>&page=1">중랑</a></li>
           </ul>
         </li>

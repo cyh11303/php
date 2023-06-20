@@ -9,11 +9,30 @@
     <link rel="stylesheet" href="mainup.css">
     <link rel="stylesheet" href="style.css">
 </head>
+<?php
+    switch($_GET["location"]){
+      case "여행지":
+        $code = 12;
+        break;
+      case "맛집":
+        $code = 39;
+        break;
+      case "문화재":
+        $code = 14;
+        break;
+      case "축제":
+        $code = 15;
+        break;
+      default:
+        //echo "테스트용 확인";
+    }
+    ?>
 <body>
 <div class="bighead">
   <div class="searchArea">
-            <form method="get" action="pro.php?page=1" >
+            <form method="get" action="procode.php?page=1" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
+            <input type="hidden" name="code" value= <?php echo $code ?>>
             <button type="submit">검색</button>
         </form>
           </div>
@@ -23,7 +42,7 @@
                 <img src="photo/exlogo.png">
               </a>
             </div>
-            <?php  ini_set( "display_errors", 0 );?>
+            <?php  //ini_set( "display_errors", 0 );?>
             <li><a href="containfood.php?search=<?php echo $_GET["search"];?>&page=1&location=맛집">맛집</a></li>
             <li><a href="containtrip.php?search=<?php echo $_GET["search"];?>&page=1&location=여행지">여행지</a></li>
             <li><a href="containculture.php?search=<?php echo $_GET["search"];?>&page=1&location=문화재">문화재</a></li>

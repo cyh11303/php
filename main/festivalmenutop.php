@@ -12,8 +12,9 @@
 <body>
 <div class="bighead">
   <div class="searchArea">
-            <form method="get" action="pro.php?page=1" >
+            <form method="get" action="procode.php?page=1" >
             <input type="text" placeholder="검색어를 입력하세요" name="search">
+            <input type="hidden" name="code" value="15">
             <button type="submit">검색</button>
         </form>
           </div>

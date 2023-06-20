@@ -103,7 +103,7 @@ switch($_GET['weather']){ // $_GET['weather']는 사용자가 입력한 값
          $_GET['wearher']="종로구";
          break;
     case "중구":
-    case "서울시 중구":
+    case "서울특별시 중구":
         $_GET['weather']="서울특별시 중구";
         break;
     case "중랑구":

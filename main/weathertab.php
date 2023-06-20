@@ -64,7 +64,7 @@
             <li><a href="weather.php?weather=<?php echo "용산구";?>&page=1&location=날씨">용산</a></li>
             <li><a href="weather.php?weather=<?php echo "은평구";?>&page=1&location=날씨">은평</a></li>
             <li><a href="weather.php?weather=<?php echo "종로구";?>&page=1&location=날씨">종로</a></li>
-            <li><a href="weather.php?weather=<?php echo "서울시 중구";?>&page=1&location=날씨">중구</a></li>
+            <li><a href="weather.php?weather=<?php echo "서울특별시 중구";?>&page=1&location=날씨">중구</a></li>
             <li><a href="weather.php?weather=<?php echo "중랑구";?>&page=1&location=날씨">중랑</a></li>
           </ul>
         </li>
