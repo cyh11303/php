@@ -23,7 +23,6 @@ include('API/area.php');//지역API
 
 
 <?php
-
 // 게시물의 총 갯수
 //$total = count($arr1) * 10;
 $total=$arr2;
@@ -84,29 +83,29 @@ if($prev_page < 1) {
 ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="pro.php?search=<?php echo $_GET["search"];?>&location=키워드&page=1'">First</a></li>
+    <li class="page-item"><a class="page-link" href="procode.php?search=<?php echo $_GET["search"];?>&code=<?php echo $_GET["code"];?>&location=<?php echo $_GET["location"];?>&page=1'">First</a></li>
 
     <?php
       if($prev_page > 1) {
-        echo '<li class="page-item"><a class="page-link" href="pro.php?search='.$_GET["search"].'&location=키워드&page='.$prev_page.'">Prev</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="procode.php?search='.$_GET["search"].'&code='.$_GET["code"].'&location='.$_GET["location"].'&page='.$prev_page.'">Prev</a></li>';
       }
 
       for($i = $start_page; $i <= $end_page; $i++) {
         if($i == $page) {
           echo '<li class="page-item active"><a class="page-link" href="#">'.$i.'</a></li>';
         }else {
-          echo '<li class="page-item"><a class="page-link" href="pro.php?search='.$_GET["search"].'&location=키워드&page='.$i.'">'.$i.'</a></li>';
+          echo '<li class="page-item"><a class="page-link" href="procode.php?search='.$_GET["search"].'&code='.$_GET["code"].'&location='.$_GET["location"].'&page='.$i.'">'.$i.'</a></li>';
 
         }
       }
 
       $next_page = $end_page + 1;
       if($next_page <= $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="pro.php?search='.$_GET["search"].'&location=키워드&page='.$next_page.'">Next</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="procode.php?search='.$_GET["search"].'&code='.$_GET["code"].'&location='.$_GET["location"].'&page='.$next_page.'">Next</a></li>';
       }
 
       if($page < $total_page) {
-        echo '<li class="page-item"><a class="page-link" href="pro.php?search='.$_GET["search"].'&location=키워드&page='.$total_page.'">Last</a></li>';
+        echo '<li class="page-item"><a class="page-link" href="procode.php?search='.$_GET["search"].'&code='.$_GET["code"].'&location='.$_GET["location"].'&page='.$total_page.'">Last</a></li>';
       }
     ?>
     </ul>

@@ -29,7 +29,7 @@ $page = $_GET["page"];
 $a = $_GET["a"];
 include('main/case.php');
 
-$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=400&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a . "&sigunguCode=" . $_GET["b"]; 
+$areaUri= "https://apis.data.go.kr/B551011/KorService1/areaBasedSyncList1?serviceKey=E%2BtYKbl8Zfj065tKHO%2BCkITDTCtAUsO%2FeBtnqQWouaJr8%2FJmVMzZ%2BTtcylbMsR%2B%2Fct28ekxvIHcWVJBbp3CEtg%3D%3D&numOfRows=1000&pageNo=". $page ."&MobileOS=ETC&MobileApp=AppTest&_type=json&showflag=1&listYN=Y&arrange=A&contentTypeId=39&areaCode=". $a . "&sigunguCode=" . $_GET["b"]; 
 
 
 $ch = curl_init();
